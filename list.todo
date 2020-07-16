@@ -1,0 +1,44 @@
+✔ Start Cycle Menu @done(2020-07-14 20:00)
+  ✔ Instantiate cycles from templates @done(2020-07-14 20:00)
+✔ Start Workout Menu @done(2020-07-14 20:00)
+  ✔  Instantiate workout from template @done(2020-07-14 20:00)
+✔ Current Workout component @done(2020-07-14 21:41)
+  ✔ Override weights, reps, sets @done(2020-07-14 21:41)
+  ☐ Stop button
+    ✔ Workout @done(2020-07-14 21:42)
+    ☐ Block?
+    ☐ Round?
+✔ Calendar @done(2020-07-14 20:00)
+  ✔ View past workouts @done(2020-07-14 20:00)
+  ✔ View cycle begin/end @done(2020-07-14 20:00)
+  ☐ Schedule workouts ahead?
+☐ Charts/Stats
+  ☐ Reference Value Timeline w/ cycle marks
+  ☐ exercise timeline
+  ☐ Workout Time
+  ☐ exercise total reps
+☐ Exercise filter/quick search
+☐ WorkoutTemplate filter/quick search
+✔ Exercise combo box in forms @done(2020-07-15 20:13)
+✔ Workout combo box in forms @done(2020-07-15 20:13)
+☐ Auto add one round when adding block
+✔ Reorder workout_templates in cycle_template @done(2020-07-15 23:58)
+☐ Validate round_template weights to be greater than 1 (allow null)
+☐ Validate percents to be >0 <1.5
+✔ hide weight column in BlockTemplate if all blank @done(2020-07-15 20:18)
+✔ Show timer in workout form @done(2020-07-15 16:29)
+✔ JSON import/export @done(2020-07-15 20:12)
+✔ Eager load all associations in main index controller actions (workout_templates, cycle_templates, cycles) @done(2020-07-15 20:13)
+☐ fix linter warnings
+✔ autofill workout name from selected template @done(2020-07-15 15:49)
+✔ autofill cycle name from selected template @done(2020-07-15 15:49)
+✔ remember accordion open/close in WorkoutTemplates @done(2020-07-15 11:16)
+☐ Make main panes appear at the top when shown
+✔ make export json box max height 70vh @done(2020-07-16 10:42)
+✔ parse json before sending to server and stop+alert on invalid JSON @done(2020-07-16 10:43)
+✔ Make completed workout viewer in planner @done(2020-07-16 10:14)
+☐ Make cycle viewer in planner
+  ☐ triggered by calendar (current and past cycles)
+  ☐ triggered by current cycle header (or view button beside it)
+  ☐ end cycle button will be in current cycle viewer
+  ☐ show start, end, completed workouts, remaining workouts, references
