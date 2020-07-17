@@ -42,3 +42,4 @@
   ✔ triggered by current cycle header (or view button beside it) @done(2020-07-16 21:53)
   ✔ end cycle button will be in current cycle viewer @done(2020-07-16 21:53)
   ✔ show start, end, completed workouts, remaining workouts, references @done(2020-07-16 21:58)
+☐ Break up planner into components and dry out display logic
