@@ -42,7 +42,7 @@ export default function BlockTemplate({block_template}) {
               {no_weights &&
                 <TableCell component="th" scope="row">
                   {r.percent ?
-                    Math.round(r.percent * block_template.exercise.reference.value)
+                    Math.round(r.percent * block_template.exercise.reference.value)+" ("+Math.floor(r.percent*100)+"%)"
                     :
                     r.weight ? r.weight
                     :

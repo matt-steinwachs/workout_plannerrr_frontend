@@ -33,7 +33,7 @@ class CycleTemplates extends Component {
               cycle_template={m}
               key={m.id}
               updateCycleTemplate={updateCycleTemplate}
-              onDelete={() => {deleteCycleTemplate(m)}}
+              onDelete={() => {if (window.confirm("Are you sure?")) deleteCycleTemplate(m)}}
             />
           )}
         </List>

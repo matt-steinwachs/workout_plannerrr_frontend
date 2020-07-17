@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import {
   Typography,
   Button,
-  List,
-  Grid,
-  Box
+  List
 } from '@material-ui/core';
 import { Add as AddIcon } from '@material-ui/icons';
 import PublishIcon from '@material-ui/icons/Publish';

@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import { Form, Field } from 'react-final-form';
+import React from 'react';
+import { Form } from 'react-final-form';
 import arrayMutators from 'final-form-arrays';
 import { FieldArray } from 'react-final-form-arrays';
 import { TextField, Select, Autocomplete } from 'mui-rff';
-import { MenuItem, IconButton, Button, Box, Grid, Typography} from '@material-ui/core';
-import { Delete as DeleteIcon, Add as AddIcon } from '@material-ui/icons';
+import { MenuItem, IconButton, Button, Box, Grid} from '@material-ui/core';
+import { Delete as DeleteIcon } from '@material-ui/icons';
 
 
 export default function WorkoutTemplateForm({workout_template, exercises, cycle_templates, onSubmit, onClose}) {

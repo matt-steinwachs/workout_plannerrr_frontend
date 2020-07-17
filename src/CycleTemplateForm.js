@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form } from 'react-final-form'
-import { TextField, Select } from 'mui-rff';
-import { MenuItem, Button, Box, Grid} from '@material-ui/core';
+import { TextField } from 'mui-rff';
+import { Button, Box, Grid} from '@material-ui/core';
 
 export default function CycleTemplateForm({cycle_template, onSubmit, onClose}) {
   return (

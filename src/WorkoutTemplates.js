@@ -20,7 +20,6 @@ import BlockTemplate from './BlockTemplate';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 
-const API = process.env.REACT_APP_API || 'http://localhost:3001/api/v1';
 
 const styles = theme => ({
   full_width: {
@@ -29,16 +28,13 @@ const styles = theme => ({
   align_center:{
     display: "flex",
     alignItems: "center"
+  },
+  cycle_list: {
+    maxHeight: "50vh",
+    overflowY: "scroll"
   }
 });
 
-const reorder = (list, startIndex, endIndex) => {
-  const result = Array.from(list);
-  const [removed] = result.splice(startIndex, 1);
-  result.splice(endIndex, 0, removed);
-
-  return result;
-};
 
 class WorkoutTemplates extends Component {
   constructor(props){
@@ -62,7 +58,7 @@ class WorkoutTemplates extends Component {
       return;
     }
 
-    const {workout_templates, cycle_templates, reorder} = this.props;
+    const {workout_templates, reorder} = this.props;
     const w_id = parseInt(result.draggableId.split("-")[1]);
     const rdi = result.destination.index;
     const rsi = result.source.index;

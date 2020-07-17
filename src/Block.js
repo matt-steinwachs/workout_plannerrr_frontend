@@ -17,10 +17,11 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Block({block}) {
+export default function Block({block, references}) {
   const classes = useStyles();
 
-  const no_weights = block.rounds.filter(rt => rt.weight).length > 0
+  const no_weights = block.rounds.filter(rt => rt.weight).length > 0;
+
   return (
     <TableContainer component={Box} p={2}>
       <Typography component="h2" variant="h5" color="inherit">
@@ -37,18 +38,21 @@ export default function Block({block}) {
           </TableRow>
         </TableHead>
         <TableBody>
-          {block.rounds.map((r) => (
-            <TableRow key={r.id}>
-              {no_weights &&
-                <TableCell component="th" scope="row">
-                  {r.weight}
-                </TableCell>
-              }
+          {block.rounds.map((r) => {
+            const percent = Math.floor(r.weight/(references.find(ref => ref.id == block.exercise.reference_id).value)*100);
+            return (
+              <TableRow key={r.id}>
+                {no_weights &&
+                  <TableCell component="th" scope="row">
+                    {r.weight} ({percent}%)
+                  </TableCell>
+                }
 
-              <TableCell>{r.reps}</TableCell>
-              <TableCell>{r.sets}</TableCell>
-            </TableRow>
-          ))}
+                <TableCell>{r.reps}</TableCell>
+                <TableCell>{r.sets}</TableCell>
+              </TableRow>
+            )
+          })}
         </TableBody>
       </Table>
     </TableContainer>

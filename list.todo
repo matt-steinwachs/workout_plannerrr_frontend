@@ -29,7 +29,7 @@
 ✔ Show timer in workout form @done(2020-07-15 16:29)
 ✔ JSON import/export @done(2020-07-15 20:12)
 ✔ Eager load all associations in main index controller actions (workout_templates, cycle_templates, cycles) @done(2020-07-15 20:13)
-☐ fix linter warnings
+✔ fix linter warnings about unused imports and variables @done(2020-07-16 21:58)
 ✔ autofill workout name from selected template @done(2020-07-15 15:49)
 ✔ autofill cycle name from selected template @done(2020-07-15 15:49)
 ✔ remember accordion open/close in WorkoutTemplates @done(2020-07-15 11:16)
@@ -37,8 +37,8 @@
 ✔ make export json box max height 70vh @done(2020-07-16 10:42)
 ✔ parse json before sending to server and stop+alert on invalid JSON @done(2020-07-16 10:43)
 ✔ Make completed workout viewer in planner @done(2020-07-16 10:14)
-☐ Make cycle viewer in planner
-  ☐ triggered by calendar (current and past cycles)
-  ☐ triggered by current cycle header (or view button beside it)
-  ☐ end cycle button will be in current cycle viewer
-  ☐ show start, end, completed workouts, remaining workouts, references
+✔ Make cycle viewer in planner @done(2020-07-16 21:58)
+  ✔ triggered by calendar (current and past cycles) @done(2020-07-16 21:53)
+  ✔ triggered by current cycle header (or view button beside it) @done(2020-07-16 21:53)
+  ✔ end cycle button will be in current cycle viewer @done(2020-07-16 21:53)
+  ✔ show start, end, completed workouts, remaining workouts, references @done(2020-07-16 21:58)

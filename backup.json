@@ -1,0 +1,4437 @@
+{
+  "references": [
+    {
+      "id": 1,
+      "name": "Body Weight",
+      "value": 155,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 2,
+      "name": "Max Snatch",
+      "value": 145,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 3,
+      "name": "Max Clean & Jerk",
+      "value": 185,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 4,
+      "name": "Max Back Squat",
+      "value": 205,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 5,
+      "name": "Max Front Squat",
+      "value": 195,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    }
+  ],
+  "exercises": [
+    {
+      "id": 1,
+      "name": "Snatch",
+      "reference_id": 2,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 2,
+      "name": "Clean & Jerk",
+      "reference_id": 3,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 3,
+      "name": "Back Extension",
+      "reference_id": 1,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 4,
+      "name": "Muscle Snatch",
+      "reference_id": 2,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 5,
+      "name": "Clean",
+      "reference_id": 3,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 6,
+      "name": "Clean Pull",
+      "reference_id": 3,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 7,
+      "name": "Front Squat",
+      "reference_id": 5,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 8,
+      "name": "Toes to Bar",
+      "reference_id": 1,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 9,
+      "name": "Good Morning",
+      "reference_id": 4,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 10,
+      "name": "Snatch Balance + Overhead Squat",
+      "reference_id": 2,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 11,
+      "name": "Sots Press",
+      "reference_id": 3,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 12,
+      "name": "Box Jump",
+      "reference_id": 1,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 13,
+      "name": "Snatch + Hang Snatch",
+      "reference_id": 2,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 14,
+      "name": "Snatch High Pull",
+      "reference_id": 2,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 15,
+      "name": "Snatch Grip BTN Press",
+      "reference_id": 2,
+      "created_at": "2020-07-16 02:49:45 UTC",
+      "updated_at": "2020-07-16 02:49:45 UTC"
+    },
+    {
+      "id": 16,
+      "name": "Rack Jerk",
+      "reference_id": 3,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 17,
+      "name": "Back Squat",
+      "reference_id": 4,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 18,
+      "name": "Power Snatch",
+      "reference_id": 2,
+      "created_at": "2020-07-16 03:37:14 UTC",
+      "updated_at": "2020-07-16 03:37:14 UTC"
+    },
+    {
+      "id": 19,
+      "name": "Snatch Pull",
+      "reference_id": 2,
+      "created_at": "2020-07-16 06:27:25 UTC",
+      "updated_at": "2020-07-16 06:27:25 UTC"
+    },
+    {
+      "id": 20,
+      "name": "Clean Pull + Hang Clean Pull",
+      "reference_id": 3,
+      "created_at": "2020-07-16 06:39:18 UTC",
+      "updated_at": "2020-07-16 06:39:18 UTC"
+    },
+    {
+      "id": 21,
+      "name": "Push Press",
+      "reference_id": 3,
+      "created_at": "2020-07-16 06:43:05 UTC",
+      "updated_at": "2020-07-16 06:43:05 UTC"
+    },
+    {
+      "id": 26,
+      "name": "Behind the Neck Sots Press",
+      "reference_id": 3,
+      "created_at": "2020-07-16 21:16:21 UTC",
+      "updated_at": "2020-07-16 21:16:21 UTC"
+    },
+    {
+      "id": 27,
+      "name": "Rack Jerk + Front Squat",
+      "reference_id": 3,
+      "created_at": "2020-07-16 21:38:59 UTC",
+      "updated_at": "2020-07-16 21:38:59 UTC"
+    },
+    {
+      "id": 28,
+      "name": "Low Hang Snatch",
+      "reference_id": 2,
+      "created_at": "2020-07-16 21:57:04 UTC",
+      "updated_at": "2020-07-16 21:57:04 UTC"
+    },
+    {
+      "id": 29,
+      "name": "Muscle Snatch + Snatch Balance + Overhead Squat",
+      "reference_id": 2,
+      "created_at": "2020-07-16 22:25:57 UTC",
+      "updated_at": "2020-07-16 22:25:57 UTC"
+    },
+    {
+      "id": 30,
+      "name": "Clean + Hang Clean",
+      "reference_id": 3,
+      "created_at": "2020-07-16 22:28:55 UTC",
+      "updated_at": "2020-07-16 22:28:55 UTC"
+    },
+    {
+      "id": 31,
+      "name": "Medium Grip Snatch",
+      "reference_id": 2,
+      "created_at": "2020-07-16 22:38:21 UTC",
+      "updated_at": "2020-07-16 22:38:21 UTC"
+    },
+    {
+      "id": 32,
+      "name": "Medium Grip Deadlift",
+      "reference_id": 3,
+      "created_at": "2020-07-16 22:38:34 UTC",
+      "updated_at": "2020-07-16 22:38:56 UTC"
+    },
+    {
+      "id": 34,
+      "name": "Snatch Grip BTN Press + Overhead Squat",
+      "reference_id": 2,
+      "created_at": "2020-07-16 22:42:40 UTC",
+      "updated_at": "2020-07-16 22:42:40 UTC"
+    },
+    {
+      "id": 35,
+      "name": "Snatch Push Press + Overhead Squat",
+      "reference_id": 2,
+      "created_at": "2020-07-17 01:06:49 UTC",
+      "updated_at": "2020-07-17 01:06:49 UTC"
+    },
+    {
+      "id": 36,
+      "name": "Clean + Front Squat + Jerk",
+      "reference_id": 3,
+      "created_at": "2020-07-17 01:08:44 UTC",
+      "updated_at": "2020-07-17 01:08:44 UTC"
+    },
+    {
+      "id": 37,
+      "name": "Snatch Pull + Hang Snatch Pull",
+      "reference_id": 2,
+      "created_at": "2020-07-17 01:19:56 UTC",
+      "updated_at": "2020-07-17 01:19:56 UTC"
+    },
+    {
+      "id": 38,
+      "name": "Back Squat with Pause",
+      "reference_id": 4,
+      "created_at": "2020-07-17 01:22:19 UTC",
+      "updated_at": "2020-07-17 01:22:19 UTC"
+    },
+    {
+      "id": 40,
+      "name": "Hang Snatch",
+      "reference_id": 2,
+      "created_at": "2020-07-17 01:54:03 UTC",
+      "updated_at": "2020-07-17 01:54:03 UTC"
+    },
+    {
+      "id": 42,
+      "name": "Snatch Grip BTN Push Press",
+      "reference_id": 2,
+      "created_at": "2020-07-17 02:42:22 UTC",
+      "updated_at": "2020-07-17 02:42:22 UTC"
+    },
+    {
+      "id": 43,
+      "name": "Hang Clean",
+      "reference_id": 3,
+      "created_at": "2020-07-17 02:53:46 UTC",
+      "updated_at": "2020-07-17 02:53:46 UTC"
+    }
+  ],
+  "cycle_templates": [
+    {
+      "id": 1,
+      "name": "TorokhtiyATG",
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    }
+  ],
+  "workout_templates": [
+    {
+      "id": 7,
+      "name": "TorATG W1 Mon",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 21:49:29 UTC",
+      "order": 0
+    },
+    {
+      "id": 10,
+      "name": "TorATG W1 Tue",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 21:49:29 UTC",
+      "order": 1
+    },
+    {
+      "id": 11,
+      "name": "C&J EMOM 20",
+      "cycle_template_id": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC",
+      "order": null
+    },
+    {
+      "id": 12,
+      "name": "TorATG W1 Thu",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 21:49:29 UTC",
+      "order": 3
+    },
+    {
+      "id": 13,
+      "name": "TorATG W3 Wed",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 22:40:14 UTC",
+      "order": 14
+    },
+    {
+      "id": 14,
+      "name": "TorATG W3 Fri",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 22:45:33 UTC",
+      "order": 16
+    },
+    {
+      "id": 15,
+      "name": "TorATG W1 Wed",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 21:49:29 UTC",
+      "order": 2
+    },
+    {
+      "id": 16,
+      "name": "TorATG W1 Fri",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 06:35:18 UTC",
+      "updated_at": "2020-07-16 21:49:29 UTC",
+      "order": 4
+    },
+    {
+      "id": 17,
+      "name": "TorATG W1 Sat",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 21:49:29 UTC",
+      "order": 5
+    },
+    {
+      "id": 18,
+      "name": "TorATG W2 Mon",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:49:29 UTC",
+      "order": 6
+    },
+    {
+      "id": 19,
+      "name": "TorATG W2 Tue",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 21:16:24 UTC",
+      "updated_at": "2020-07-16 21:49:29 UTC",
+      "order": 7
+    },
+    {
+      "id": 20,
+      "name": "TorATG W2 Wed",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 21:42:23 UTC",
+      "updated_at": "2020-07-16 21:56:00 UTC",
+      "order": 8
+    },
+    {
+      "id": 21,
+      "name": "TorATG W2 Thu",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 21:54:14 UTC",
+      "updated_at": "2020-07-16 21:56:00 UTC",
+      "order": 9
+    },
+    {
+      "id": 22,
+      "name": "TorATG W2 Fri",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:39 UTC",
+      "order": 10
+    },
+    {
+      "id": 23,
+      "name": "TorATG W2 Sat",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:59 UTC",
+      "order": 11
+    },
+    {
+      "id": 24,
+      "name": "TorATG W3 Mon",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:13 UTC",
+      "order": 12
+    },
+    {
+      "id": 25,
+      "name": "TorATG W3 Tue",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 22:40:10 UTC",
+      "updated_at": "2020-07-16 22:40:14 UTC",
+      "order": 13
+    },
+    {
+      "id": 26,
+      "name": "TorATG W3 Thu",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 22:45:31 UTC",
+      "updated_at": "2020-07-16 22:45:33 UTC",
+      "order": 15
+    },
+    {
+      "id": 27,
+      "name": "TorATG W3 Sat",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC",
+      "order": 17
+    },
+    {
+      "id": 28,
+      "name": "TorATG W4 Mon",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC",
+      "order": 18
+    },
+    {
+      "id": 29,
+      "name": "TorATG W4 Tue",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC",
+      "order": 19
+    },
+    {
+      "id": 30,
+      "name": "TorATG W4 Wed",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC",
+      "order": 20
+    },
+    {
+      "id": 31,
+      "name": "TorATG W4 Thu",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC",
+      "order": 21
+    },
+    {
+      "id": 32,
+      "name": "TorATG W4 Fri",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC",
+      "order": 22
+    },
+    {
+      "id": 33,
+      "name": "TorATG W4 Sat",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC",
+      "order": 23
+    },
+    {
+      "id": 34,
+      "name": "TorATG W5 Mon",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC",
+      "order": 24
+    },
+    {
+      "id": 35,
+      "name": "TorATG W5 Tue",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-17 02:54:58 UTC",
+      "updated_at": "2020-07-17 02:54:58 UTC",
+      "order": 25
+    }
+  ],
+  "block_templates": [
+    {
+      "id": 13,
+      "workout_template_id": 7,
+      "exercise_id": 3,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 14,
+      "workout_template_id": 7,
+      "exercise_id": 4,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 15,
+      "workout_template_id": 7,
+      "exercise_id": 5,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 16,
+      "workout_template_id": 7,
+      "exercise_id": 6,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 17,
+      "workout_template_id": 7,
+      "exercise_id": 7,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 18,
+      "workout_template_id": 7,
+      "exercise_id": 8,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 21,
+      "workout_template_id": 10,
+      "exercise_id": 9,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 22,
+      "workout_template_id": 10,
+      "exercise_id": 10,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 23,
+      "workout_template_id": 11,
+      "exercise_id": 2,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 26,
+      "workout_template_id": 10,
+      "exercise_id": 11,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 27,
+      "workout_template_id": 10,
+      "exercise_id": 2,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 28,
+      "workout_template_id": 10,
+      "exercise_id": 12,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 29,
+      "workout_template_id": 10,
+      "exercise_id": 8,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 30,
+      "workout_template_id": 12,
+      "exercise_id": 9,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 31,
+      "workout_template_id": 12,
+      "exercise_id": 13,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 32,
+      "workout_template_id": 12,
+      "exercise_id": 14,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 33,
+      "workout_template_id": 12,
+      "exercise_id": 15,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 34,
+      "workout_template_id": 12,
+      "exercise_id": 12,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 35,
+      "workout_template_id": 12,
+      "exercise_id": 8,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 36,
+      "workout_template_id": 13,
+      "exercise_id": 3,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 37,
+      "workout_template_id": 13,
+      "exercise_id": 13,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 38,
+      "workout_template_id": 13,
+      "exercise_id": 16,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 39,
+      "workout_template_id": 13,
+      "exercise_id": 17,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 40,
+      "workout_template_id": 14,
+      "exercise_id": 3,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 41,
+      "workout_template_id": 14,
+      "exercise_id": 18,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 42,
+      "workout_template_id": 14,
+      "exercise_id": 2,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 43,
+      "workout_template_id": 14,
+      "exercise_id": 6,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 44,
+      "workout_template_id": 15,
+      "exercise_id": 3,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 45,
+      "workout_template_id": 15,
+      "exercise_id": 1,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 46,
+      "workout_template_id": 15,
+      "exercise_id": 16,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 47,
+      "workout_template_id": 15,
+      "exercise_id": 19,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 48,
+      "workout_template_id": 15,
+      "exercise_id": 17,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 49,
+      "workout_template_id": 15,
+      "exercise_id": 8,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 50,
+      "workout_template_id": 16,
+      "exercise_id": 3,
+      "created_at": "2020-07-16 06:35:18 UTC",
+      "updated_at": "2020-07-16 06:35:18 UTC"
+    },
+    {
+      "id": 51,
+      "workout_template_id": 16,
+      "exercise_id": 18,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 52,
+      "workout_template_id": 16,
+      "exercise_id": 2,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 53,
+      "workout_template_id": 16,
+      "exercise_id": 20,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 54,
+      "workout_template_id": 16,
+      "exercise_id": 8,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 55,
+      "workout_template_id": 17,
+      "exercise_id": 9,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 56,
+      "workout_template_id": 17,
+      "exercise_id": 21,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 57,
+      "workout_template_id": 17,
+      "exercise_id": 7,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 58,
+      "workout_template_id": 17,
+      "exercise_id": 12,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 59,
+      "workout_template_id": 17,
+      "exercise_id": 8,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 60,
+      "workout_template_id": 18,
+      "exercise_id": 3,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 61,
+      "workout_template_id": 18,
+      "exercise_id": 18,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 62,
+      "workout_template_id": 18,
+      "exercise_id": 14,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 63,
+      "workout_template_id": 18,
+      "exercise_id": 5,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 64,
+      "workout_template_id": 18,
+      "exercise_id": 17,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 65,
+      "workout_template_id": 19,
+      "exercise_id": 9,
+      "created_at": "2020-07-16 21:16:24 UTC",
+      "updated_at": "2020-07-16 21:16:24 UTC"
+    },
+    {
+      "id": 66,
+      "workout_template_id": 19,
+      "exercise_id": 10,
+      "created_at": "2020-07-16 21:16:24 UTC",
+      "updated_at": "2020-07-16 21:16:24 UTC"
+    },
+    {
+      "id": 67,
+      "workout_template_id": 19,
+      "exercise_id": 4,
+      "created_at": "2020-07-16 21:16:24 UTC",
+      "updated_at": "2020-07-16 21:16:24 UTC"
+    },
+    {
+      "id": 68,
+      "workout_template_id": 19,
+      "exercise_id": 26,
+      "created_at": "2020-07-16 21:16:56 UTC",
+      "updated_at": "2020-07-16 21:16:56 UTC"
+    },
+    {
+      "id": 69,
+      "workout_template_id": 20,
+      "exercise_id": 3,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 70,
+      "workout_template_id": 20,
+      "exercise_id": 1,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 71,
+      "workout_template_id": 20,
+      "exercise_id": 27,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 72,
+      "workout_template_id": 20,
+      "exercise_id": 7,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 73,
+      "workout_template_id": 21,
+      "exercise_id": 9,
+      "created_at": "2020-07-16 21:54:14 UTC",
+      "updated_at": "2020-07-16 21:54:14 UTC"
+    },
+    {
+      "id": 74,
+      "workout_template_id": 21,
+      "exercise_id": 1,
+      "created_at": "2020-07-16 21:54:14 UTC",
+      "updated_at": "2020-07-16 21:54:14 UTC"
+    },
+    {
+      "id": 75,
+      "workout_template_id": 21,
+      "exercise_id": 2,
+      "created_at": "2020-07-16 21:54:14 UTC",
+      "updated_at": "2020-07-16 21:54:14 UTC"
+    },
+    {
+      "id": 76,
+      "workout_template_id": 21,
+      "exercise_id": 19,
+      "created_at": "2020-07-16 21:54:14 UTC",
+      "updated_at": "2020-07-16 21:54:14 UTC"
+    },
+    {
+      "id": 77,
+      "workout_template_id": 22,
+      "exercise_id": 3,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 78,
+      "workout_template_id": 22,
+      "exercise_id": 28,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 79,
+      "workout_template_id": 22,
+      "exercise_id": 2,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 80,
+      "workout_template_id": 22,
+      "exercise_id": 6,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 81,
+      "workout_template_id": 23,
+      "exercise_id": 9,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 82,
+      "workout_template_id": 23,
+      "exercise_id": 1,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 83,
+      "workout_template_id": 23,
+      "exercise_id": 21,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 84,
+      "workout_template_id": 23,
+      "exercise_id": 17,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 85,
+      "workout_template_id": 24,
+      "exercise_id": 3,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 86,
+      "workout_template_id": 24,
+      "exercise_id": 29,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 87,
+      "workout_template_id": 24,
+      "exercise_id": 19,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 88,
+      "workout_template_id": 24,
+      "exercise_id": 30,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 89,
+      "workout_template_id": 24,
+      "exercise_id": 7,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 90,
+      "workout_template_id": 25,
+      "exercise_id": 9,
+      "created_at": "2020-07-16 22:40:10 UTC",
+      "updated_at": "2020-07-16 22:40:10 UTC"
+    },
+    {
+      "id": 91,
+      "workout_template_id": 25,
+      "exercise_id": 31,
+      "created_at": "2020-07-16 22:40:10 UTC",
+      "updated_at": "2020-07-16 22:40:10 UTC"
+    },
+    {
+      "id": 92,
+      "workout_template_id": 25,
+      "exercise_id": 32,
+      "created_at": "2020-07-16 22:40:10 UTC",
+      "updated_at": "2020-07-16 22:40:10 UTC"
+    },
+    {
+      "id": 93,
+      "workout_template_id": 25,
+      "exercise_id": 12,
+      "created_at": "2020-07-16 22:40:10 UTC",
+      "updated_at": "2020-07-16 22:40:10 UTC"
+    },
+    {
+      "id": 94,
+      "workout_template_id": 25,
+      "exercise_id": 8,
+      "created_at": "2020-07-16 22:40:10 UTC",
+      "updated_at": "2020-07-16 22:40:10 UTC"
+    },
+    {
+      "id": 95,
+      "workout_template_id": 26,
+      "exercise_id": 9,
+      "created_at": "2020-07-16 22:45:31 UTC",
+      "updated_at": "2020-07-16 22:45:31 UTC"
+    },
+    {
+      "id": 96,
+      "workout_template_id": 26,
+      "exercise_id": 34,
+      "created_at": "2020-07-16 22:45:31 UTC",
+      "updated_at": "2020-07-16 22:45:31 UTC"
+    },
+    {
+      "id": 97,
+      "workout_template_id": 26,
+      "exercise_id": 2,
+      "created_at": "2020-07-16 22:45:31 UTC",
+      "updated_at": "2020-07-16 22:45:31 UTC"
+    },
+    {
+      "id": 98,
+      "workout_template_id": 26,
+      "exercise_id": 12,
+      "created_at": "2020-07-16 22:45:31 UTC",
+      "updated_at": "2020-07-16 22:45:31 UTC"
+    },
+    {
+      "id": 99,
+      "workout_template_id": 26,
+      "exercise_id": 8,
+      "created_at": "2020-07-16 22:45:31 UTC",
+      "updated_at": "2020-07-16 22:45:31 UTC"
+    },
+    {
+      "id": 100,
+      "workout_template_id": 27,
+      "exercise_id": 9,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 101,
+      "workout_template_id": 27,
+      "exercise_id": 21,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 102,
+      "workout_template_id": 27,
+      "exercise_id": 7,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 103,
+      "workout_template_id": 27,
+      "exercise_id": 12,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 104,
+      "workout_template_id": 27,
+      "exercise_id": 8,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 105,
+      "workout_template_id": 28,
+      "exercise_id": 3,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 106,
+      "workout_template_id": 28,
+      "exercise_id": 35,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 107,
+      "workout_template_id": 28,
+      "exercise_id": 18,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 108,
+      "workout_template_id": 28,
+      "exercise_id": 36,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 109,
+      "workout_template_id": 28,
+      "exercise_id": 7,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 110,
+      "workout_template_id": 29,
+      "exercise_id": 9,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 111,
+      "workout_template_id": 29,
+      "exercise_id": 21,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 112,
+      "workout_template_id": 29,
+      "exercise_id": 20,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 113,
+      "workout_template_id": 29,
+      "exercise_id": 12,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 114,
+      "workout_template_id": 29,
+      "exercise_id": 8,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 115,
+      "workout_template_id": 30,
+      "exercise_id": 3,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 116,
+      "workout_template_id": 30,
+      "exercise_id": 13,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 117,
+      "workout_template_id": 30,
+      "exercise_id": 37,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 118,
+      "workout_template_id": 30,
+      "exercise_id": 16,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 119,
+      "workout_template_id": 30,
+      "exercise_id": 38,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 120,
+      "workout_template_id": 31,
+      "exercise_id": 9,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC"
+    },
+    {
+      "id": 121,
+      "workout_template_id": 31,
+      "exercise_id": 31,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC"
+    },
+    {
+      "id": 122,
+      "workout_template_id": 31,
+      "exercise_id": 2,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC"
+    },
+    {
+      "id": 123,
+      "workout_template_id": 31,
+      "exercise_id": 12,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC"
+    },
+    {
+      "id": 124,
+      "workout_template_id": 31,
+      "exercise_id": 8,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC"
+    },
+    {
+      "id": 125,
+      "workout_template_id": 32,
+      "exercise_id": 3,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC"
+    },
+    {
+      "id": 126,
+      "workout_template_id": 32,
+      "exercise_id": 4,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC"
+    },
+    {
+      "id": 127,
+      "workout_template_id": 32,
+      "exercise_id": 40,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC"
+    },
+    {
+      "id": 128,
+      "workout_template_id": 32,
+      "exercise_id": 2,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC"
+    },
+    {
+      "id": 129,
+      "workout_template_id": 32,
+      "exercise_id": 6,
+      "created_at": "2020-07-17 02:23:08 UTC",
+      "updated_at": "2020-07-17 02:23:08 UTC"
+    },
+    {
+      "id": 130,
+      "workout_template_id": 33,
+      "exercise_id": 3,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 131,
+      "workout_template_id": 33,
+      "exercise_id": 10,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 132,
+      "workout_template_id": 33,
+      "exercise_id": 1,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 133,
+      "workout_template_id": 33,
+      "exercise_id": 17,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 134,
+      "workout_template_id": 33,
+      "exercise_id": 12,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 135,
+      "workout_template_id": 34,
+      "exercise_id": 3,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 136,
+      "workout_template_id": 34,
+      "exercise_id": 4,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 137,
+      "workout_template_id": 34,
+      "exercise_id": 42,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 138,
+      "workout_template_id": 34,
+      "exercise_id": 2,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 139,
+      "workout_template_id": 34,
+      "exercise_id": 17,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 140,
+      "workout_template_id": 35,
+      "exercise_id": 9,
+      "created_at": "2020-07-17 02:54:58 UTC",
+      "updated_at": "2020-07-17 02:54:58 UTC"
+    },
+    {
+      "id": 141,
+      "workout_template_id": 35,
+      "exercise_id": 1,
+      "created_at": "2020-07-17 02:54:58 UTC",
+      "updated_at": "2020-07-17 02:54:58 UTC"
+    },
+    {
+      "id": 142,
+      "workout_template_id": 35,
+      "exercise_id": 43,
+      "created_at": "2020-07-17 02:54:58 UTC",
+      "updated_at": "2020-07-17 02:54:58 UTC"
+    },
+    {
+      "id": 143,
+      "workout_template_id": 35,
+      "exercise_id": 8,
+      "created_at": "2020-07-17 02:54:58 UTC",
+      "updated_at": "2020-07-17 02:54:58 UTC"
+    },
+    {
+      "id": 144,
+      "workout_template_id": 35,
+      "exercise_id": 12,
+      "created_at": "2020-07-17 02:54:58 UTC",
+      "updated_at": "2020-07-17 02:54:58 UTC"
+    }
+  ],
+  "round_templates": [
+    {
+      "id": 23,
+      "block_template_id": 13,
+      "reps": "10",
+      "sets": 4,
+      "percent": null,
+      "weight": 10,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 24,
+      "block_template_id": 14,
+      "reps": "6",
+      "sets": 2,
+      "percent": null,
+      "weight": 45,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 25,
+      "block_template_id": 14,
+      "reps": "5",
+      "sets": 2,
+      "percent": null,
+      "weight": 65,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 26,
+      "block_template_id": 14,
+      "reps": "4",
+      "sets": 3,
+      "percent": null,
+      "weight": 85,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 27,
+      "block_template_id": 15,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 28,
+      "block_template_id": 15,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 29,
+      "block_template_id": 15,
+      "reps": "3",
+      "sets": 4,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 30,
+      "block_template_id": 16,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 31,
+      "block_template_id": 16,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 32,
+      "block_template_id": 16,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 33,
+      "block_template_id": 16,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.85,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 34,
+      "block_template_id": 17,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 35,
+      "block_template_id": 17,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 36,
+      "block_template_id": 17,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 37,
+      "block_template_id": 18,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 40,
+      "block_template_id": 21,
+      "reps": "8",
+      "sets": 2,
+      "percent": null,
+      "weight": 45,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 41,
+      "block_template_id": 21,
+      "reps": "6",
+      "sets": 2,
+      "percent": null,
+      "weight": 65,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 42,
+      "block_template_id": 22,
+      "reps": "[3,3]",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 43,
+      "block_template_id": 22,
+      "reps": "[3,3]",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 44,
+      "block_template_id": 23,
+      "reps": "1",
+      "sets": 20,
+      "percent": 0.85,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 47,
+      "block_template_id": 26,
+      "reps": "6",
+      "sets": 4,
+      "percent": null,
+      "weight": 45,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 48,
+      "block_template_id": 26,
+      "reps": "3",
+      "sets": 4,
+      "percent": null,
+      "weight": 65,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 49,
+      "block_template_id": 27,
+      "reps": "[3,3]",
+      "sets": 5,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 50,
+      "block_template_id": 28,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 51,
+      "block_template_id": 29,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 52,
+      "block_template_id": 30,
+      "reps": "10",
+      "sets": 2,
+      "percent": null,
+      "weight": 55,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 53,
+      "block_template_id": 30,
+      "reps": "8",
+      "sets": 2,
+      "percent": null,
+      "weight": 75,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 54,
+      "block_template_id": 31,
+      "reps": "[4,4]",
+      "sets": 6,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 55,
+      "block_template_id": 32,
+      "reps": "3",
+      "sets": 5,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 56,
+      "block_template_id": 33,
+      "reps": "5",
+      "sets": 5,
+      "percent": null,
+      "weight": 65,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 57,
+      "block_template_id": 34,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 58,
+      "block_template_id": 35,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 59,
+      "block_template_id": 36,
+      "reps": "10",
+      "sets": 2,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 60,
+      "block_template_id": 37,
+      "reps": "[1,1]",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": 0,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 61,
+      "block_template_id": 37,
+      "reps": "[1,1]",
+      "sets": 2,
+      "percent": 0.75,
+      "weight": 0,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 62,
+      "block_template_id": 37,
+      "reps": "[1,1]",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": 0,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 63,
+      "block_template_id": 37,
+      "reps": "[1,1]",
+      "sets": 2,
+      "percent": 0.9,
+      "weight": 0,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 64,
+      "block_template_id": 38,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 65,
+      "block_template_id": 38,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 66,
+      "block_template_id": 38,
+      "reps": "2",
+      "sets": 4,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 67,
+      "block_template_id": 39,
+      "reps": "4",
+      "sets": 1,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 68,
+      "block_template_id": 39,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 69,
+      "block_template_id": 39,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 70,
+      "block_template_id": 39,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 71,
+      "block_template_id": 39,
+      "reps": "2",
+      "sets": 4,
+      "percent": 0.9,
+      "weight": null,
+      "created_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 72,
+      "block_template_id": 40,
+      "reps": "10",
+      "sets": 2,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 73,
+      "block_template_id": 41,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 74,
+      "block_template_id": 41,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 75,
+      "block_template_id": 41,
+      "reps": "2",
+      "sets": 4,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 76,
+      "block_template_id": 42,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 77,
+      "block_template_id": 42,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 78,
+      "block_template_id": 42,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 79,
+      "block_template_id": 42,
+      "reps": "[2,1]",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 80,
+      "block_template_id": 42,
+      "reps": "[1,1]",
+      "sets": 1,
+      "percent": 0.9,
+      "weight": null,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 81,
+      "block_template_id": 43,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 82,
+      "block_template_id": 43,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 83,
+      "block_template_id": 43,
+      "reps": "3",
+      "sets": 4,
+      "percent": 0.95,
+      "weight": null,
+      "created_at": "2020-07-16 03:40:36 UTC",
+      "updated_at": "2020-07-16 03:40:36 UTC"
+    },
+    {
+      "id": 84,
+      "block_template_id": 44,
+      "reps": "6",
+      "sets": 3,
+      "percent": null,
+      "weight": 20,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 85,
+      "block_template_id": 45,
+      "reps": "2",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 86,
+      "block_template_id": 45,
+      "reps": "2",
+      "sets": 2,
+      "percent": 0.65,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 87,
+      "block_template_id": 45,
+      "reps": "2",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 88,
+      "block_template_id": 45,
+      "reps": "2",
+      "sets": 3,
+      "percent": 0.75,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 89,
+      "block_template_id": 46,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 90,
+      "block_template_id": 46,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 91,
+      "block_template_id": 46,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.65,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 92,
+      "block_template_id": 47,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 93,
+      "block_template_id": 47,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 94,
+      "block_template_id": 47,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.75,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 95,
+      "block_template_id": 47,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 96,
+      "block_template_id": 48,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 97,
+      "block_template_id": 48,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 98,
+      "block_template_id": 48,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 99,
+      "block_template_id": 48,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.85,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 100,
+      "block_template_id": 48,
+      "reps": "2",
+      "sets": 3,
+      "percent": 0.9,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 101,
+      "block_template_id": 49,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 06:30:01 UTC",
+      "updated_at": "2020-07-16 06:30:01 UTC"
+    },
+    {
+      "id": 102,
+      "block_template_id": 50,
+      "reps": "8",
+      "sets": 3,
+      "percent": null,
+      "weight": 10,
+      "created_at": "2020-07-16 06:35:18 UTC",
+      "updated_at": "2020-07-16 06:35:18 UTC"
+    },
+    {
+      "id": 103,
+      "block_template_id": 51,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 104,
+      "block_template_id": 51,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 105,
+      "block_template_id": 52,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 106,
+      "block_template_id": 52,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 107,
+      "block_template_id": 52,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 108,
+      "block_template_id": 52,
+      "reps": "[2,1]",
+      "sets": 1,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 109,
+      "block_template_id": 53,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 110,
+      "block_template_id": 53,
+      "reps": "3",
+      "sets": 4,
+      "percent": 0.85,
+      "weight": null,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 111,
+      "block_template_id": 54,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 06:42:18 UTC",
+      "updated_at": "2020-07-16 06:42:18 UTC"
+    },
+    {
+      "id": 112,
+      "block_template_id": 55,
+      "reps": "8",
+      "sets": 4,
+      "percent": null,
+      "weight": 20,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 113,
+      "block_template_id": 56,
+      "reps": "4",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 114,
+      "block_template_id": 56,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 115,
+      "block_template_id": 57,
+      "reps": "4",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 116,
+      "block_template_id": 57,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 117,
+      "block_template_id": 57,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.85,
+      "weight": null,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 118,
+      "block_template_id": 58,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 119,
+      "block_template_id": 59,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 20:54:43 UTC",
+      "updated_at": "2020-07-16 20:54:43 UTC"
+    },
+    {
+      "id": 120,
+      "block_template_id": 60,
+      "reps": "6",
+      "sets": 3,
+      "percent": null,
+      "weight": 15,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 121,
+      "block_template_id": 61,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 122,
+      "block_template_id": 61,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 123,
+      "block_template_id": 61,
+      "reps": "2",
+      "sets": 4,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 124,
+      "block_template_id": 62,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 125,
+      "block_template_id": 62,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 126,
+      "block_template_id": 62,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:04:15 UTC"
+    },
+    {
+      "id": 127,
+      "block_template_id": 63,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 128,
+      "block_template_id": 63,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 129,
+      "block_template_id": 63,
+      "reps": "3",
+      "sets": 4,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 130,
+      "block_template_id": 64,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 131,
+      "block_template_id": 64,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 21:03:26 UTC",
+      "updated_at": "2020-07-16 21:03:26 UTC"
+    },
+    {
+      "id": 132,
+      "block_template_id": 65,
+      "reps": "10",
+      "sets": 4,
+      "percent": null,
+      "weight": 45,
+      "created_at": "2020-07-16 21:16:24 UTC",
+      "updated_at": "2020-07-16 21:16:24 UTC"
+    },
+    {
+      "id": 133,
+      "block_template_id": 66,
+      "reps": "[3,3]",
+      "sets": 1,
+      "percent": null,
+      "weight": 45,
+      "created_at": "2020-07-16 21:16:24 UTC",
+      "updated_at": "2020-07-16 21:16:24 UTC"
+    },
+    {
+      "id": 134,
+      "block_template_id": 66,
+      "reps": "[3,2]",
+      "sets": 4,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 21:16:24 UTC",
+      "updated_at": "2020-07-16 21:16:24 UTC"
+    },
+    {
+      "id": 135,
+      "block_template_id": 67,
+      "reps": "3",
+      "sets": 3,
+      "percent": null,
+      "weight": 45,
+      "created_at": "2020-07-16 21:16:24 UTC",
+      "updated_at": "2020-07-16 21:16:24 UTC"
+    },
+    {
+      "id": 136,
+      "block_template_id": 67,
+      "reps": "3",
+      "sets": 4,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 21:16:24 UTC",
+      "updated_at": "2020-07-16 21:16:24 UTC"
+    },
+    {
+      "id": 137,
+      "block_template_id": 68,
+      "reps": "8",
+      "sets": 3,
+      "percent": 0.4,
+      "weight": null,
+      "created_at": "2020-07-16 21:16:56 UTC",
+      "updated_at": "2020-07-16 21:17:21 UTC"
+    },
+    {
+      "id": 138,
+      "block_template_id": 69,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 139,
+      "block_template_id": 70,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 140,
+      "block_template_id": 70,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 141,
+      "block_template_id": 70,
+      "reps": "2",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 142,
+      "block_template_id": 70,
+      "reps": "2",
+      "sets": 2,
+      "percent": 0.75,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 143,
+      "block_template_id": 70,
+      "reps": "2",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 144,
+      "block_template_id": 70,
+      "reps": "1",
+      "sets": 2,
+      "percent": 0.85,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 145,
+      "block_template_id": 71,
+      "reps": "[3,3]",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 146,
+      "block_template_id": 71,
+      "reps": "[3,3]",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 147,
+      "block_template_id": 71,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 148,
+      "block_template_id": 71,
+      "reps": "[2,2]",
+      "sets": 4,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 149,
+      "block_template_id": 72,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 150,
+      "block_template_id": 72,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 151,
+      "block_template_id": 72,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.9,
+      "weight": null,
+      "created_at": "2020-07-16 21:42:24 UTC",
+      "updated_at": "2020-07-16 21:42:24 UTC"
+    },
+    {
+      "id": 152,
+      "block_template_id": 73,
+      "reps": "10",
+      "sets": 4,
+      "percent": null,
+      "weight": 65,
+      "created_at": "2020-07-16 21:54:14 UTC",
+      "updated_at": "2020-07-16 21:54:14 UTC"
+    },
+    {
+      "id": 153,
+      "block_template_id": 74,
+      "reps": "4",
+      "sets": 6,
+      "percent": 0.4,
+      "weight": null,
+      "created_at": "2020-07-16 21:54:14 UTC",
+      "updated_at": "2020-07-16 21:54:14 UTC"
+    },
+    {
+      "id": 154,
+      "block_template_id": 75,
+      "reps": "[2,2]",
+      "sets": 6,
+      "percent": 0.4,
+      "weight": null,
+      "created_at": "2020-07-16 21:54:14 UTC",
+      "updated_at": "2020-07-16 21:54:14 UTC"
+    },
+    {
+      "id": 155,
+      "block_template_id": 76,
+      "reps": "3",
+      "sets": 4,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 21:54:14 UTC",
+      "updated_at": "2020-07-16 21:54:14 UTC"
+    },
+    {
+      "id": 156,
+      "block_template_id": 77,
+      "reps": "8",
+      "sets": 2,
+      "percent": null,
+      "weight": 10,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 157,
+      "block_template_id": 78,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 158,
+      "block_template_id": 78,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 159,
+      "block_template_id": 78,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 160,
+      "block_template_id": 79,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 161,
+      "block_template_id": 79,
+      "reps": "2",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 162,
+      "block_template_id": 79,
+      "reps": "2",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 163,
+      "block_template_id": 79,
+      "reps": "2",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 164,
+      "block_template_id": 80,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 165,
+      "block_template_id": 80,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 166,
+      "block_template_id": 80,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.9,
+      "weight": null,
+      "created_at": "2020-07-16 21:59:32 UTC",
+      "updated_at": "2020-07-16 21:59:32 UTC"
+    },
+    {
+      "id": 167,
+      "block_template_id": 81,
+      "reps": "10",
+      "sets": 4,
+      "percent": null,
+      "weight": 65,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 168,
+      "block_template_id": 82,
+      "reps": "3",
+      "sets": 6,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 169,
+      "block_template_id": 83,
+      "reps": "4",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 170,
+      "block_template_id": 83,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 171,
+      "block_template_id": 83,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 172,
+      "block_template_id": 84,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 173,
+      "block_template_id": 84,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 174,
+      "block_template_id": 84,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 175,
+      "block_template_id": 84,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.9,
+      "weight": null,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 176,
+      "block_template_id": 84,
+      "reps": "3",
+      "sets": 1,
+      "percent": 1,
+      "weight": null,
+      "created_at": "2020-07-16 22:02:56 UTC",
+      "updated_at": "2020-07-16 22:02:56 UTC"
+    },
+    {
+      "id": 177,
+      "block_template_id": 85,
+      "reps": "10",
+      "sets": 2,
+      "percent": null,
+      "weight": 45,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 178,
+      "block_template_id": 86,
+      "reps": "[3,3,3]",
+      "sets": 2,
+      "percent": null,
+      "weight": 45,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 179,
+      "block_template_id": 86,
+      "reps": "[2,2,2]",
+      "sets": 4,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 180,
+      "block_template_id": 87,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 181,
+      "block_template_id": 87,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 182,
+      "block_template_id": 87,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 183,
+      "block_template_id": 87,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 184,
+      "block_template_id": 87,
+      "reps": "2",
+      "sets": 3,
+      "percent": 0.9,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 185,
+      "block_template_id": 88,
+      "reps": "[1,2]",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 186,
+      "block_template_id": 88,
+      "reps": "[1,2]",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 187,
+      "block_template_id": 88,
+      "reps": "[1,2]",
+      "sets": 3,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 188,
+      "block_template_id": 89,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 189,
+      "block_template_id": 89,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 190,
+      "block_template_id": 89,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 191,
+      "block_template_id": 89,
+      "reps": "2",
+      "sets": 3,
+      "percent": 0.85,
+      "weight": null,
+      "created_at": "2020-07-16 22:34:06 UTC",
+      "updated_at": "2020-07-16 22:34:06 UTC"
+    },
+    {
+      "id": 192,
+      "block_template_id": 90,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": 45,
+      "created_at": "2020-07-16 22:40:10 UTC",
+      "updated_at": "2020-07-16 22:40:10 UTC"
+    },
+    {
+      "id": 193,
+      "block_template_id": 91,
+      "reps": "3",
+      "sets": 4,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 22:40:10 UTC",
+      "updated_at": "2020-07-16 22:40:10 UTC"
+    },
+    {
+      "id": 194,
+      "block_template_id": 92,
+      "reps": "3",
+      "sets": 4,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-16 22:40:10 UTC",
+      "updated_at": "2020-07-16 22:40:10 UTC"
+    },
+    {
+      "id": 195,
+      "block_template_id": 93,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 22:40:10 UTC",
+      "updated_at": "2020-07-16 22:40:10 UTC"
+    },
+    {
+      "id": 196,
+      "block_template_id": 94,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 22:40:10 UTC",
+      "updated_at": "2020-07-16 22:40:10 UTC"
+    },
+    {
+      "id": 197,
+      "block_template_id": 95,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": 65,
+      "created_at": "2020-07-16 22:45:31 UTC",
+      "updated_at": "2020-07-16 22:45:31 UTC"
+    },
+    {
+      "id": 198,
+      "block_template_id": 96,
+      "reps": "[6,3]",
+      "sets": 5,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 22:45:31 UTC",
+      "updated_at": "2020-07-16 22:45:31 UTC"
+    },
+    {
+      "id": 199,
+      "block_template_id": 97,
+      "reps": "[3,3]5",
+      "sets": 5,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 22:45:31 UTC",
+      "updated_at": "2020-07-16 22:45:31 UTC"
+    },
+    {
+      "id": 200,
+      "block_template_id": 98,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 22:45:31 UTC",
+      "updated_at": "2020-07-16 22:45:31 UTC"
+    },
+    {
+      "id": 201,
+      "block_template_id": 99,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 22:45:31 UTC",
+      "updated_at": "2020-07-16 22:45:31 UTC"
+    },
+    {
+      "id": 202,
+      "block_template_id": 100,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": 65,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 203,
+      "block_template_id": 101,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 204,
+      "block_template_id": 101,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 205,
+      "block_template_id": 101,
+      "reps": "3",
+      "sets": 4,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 206,
+      "block_template_id": 102,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 207,
+      "block_template_id": 102,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 208,
+      "block_template_id": 102,
+      "reps": "3",
+      "sets": 4,
+      "percent": 0.85,
+      "weight": null,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 209,
+      "block_template_id": 103,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 210,
+      "block_template_id": 104,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-16 22:47:55 UTC",
+      "updated_at": "2020-07-16 22:47:55 UTC"
+    },
+    {
+      "id": 211,
+      "block_template_id": 105,
+      "reps": "10",
+      "sets": 2,
+      "percent": null,
+      "weight": 10,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 212,
+      "block_template_id": 106,
+      "reps": "[3,2]",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 213,
+      "block_template_id": 106,
+      "reps": "[3,2]",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 214,
+      "block_template_id": 106,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 215,
+      "block_template_id": 107,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 216,
+      "block_template_id": 107,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 217,
+      "block_template_id": 107,
+      "reps": "2",
+      "sets": 3,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 218,
+      "block_template_id": 108,
+      "reps": "[2,2,2]",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 219,
+      "block_template_id": 108,
+      "reps": "[2,2,2]",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 220,
+      "block_template_id": 108,
+      "reps": "[2,2,2]",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 221,
+      "block_template_id": 109,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 222,
+      "block_template_id": 109,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 223,
+      "block_template_id": 109,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 224,
+      "block_template_id": 109,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.85,
+      "weight": null,
+      "created_at": "2020-07-17 01:10:16 UTC",
+      "updated_at": "2020-07-17 01:10:16 UTC"
+    },
+    {
+      "id": 225,
+      "block_template_id": 110,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": 45,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 226,
+      "block_template_id": 111,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 227,
+      "block_template_id": 111,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 228,
+      "block_template_id": 111,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 229,
+      "block_template_id": 112,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 230,
+      "block_template_id": 112,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 231,
+      "block_template_id": 112,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 232,
+      "block_template_id": 112,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 233,
+      "block_template_id": 113,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 234,
+      "block_template_id": 114,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-17 01:12:38 UTC",
+      "updated_at": "2020-07-17 01:12:38 UTC"
+    },
+    {
+      "id": 235,
+      "block_template_id": 115,
+      "reps": "10",
+      "sets": 2,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 236,
+      "block_template_id": 116,
+      "reps": "[1,2]",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 237,
+      "block_template_id": 116,
+      "reps": "[1,2]",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 238,
+      "block_template_id": 116,
+      "reps": "[1,2]",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 239,
+      "block_template_id": 116,
+      "reps": "[1,1]",
+      "sets": 2,
+      "percent": 0.75,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 240,
+      "block_template_id": 116,
+      "reps": "[1,1]",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 241,
+      "block_template_id": 117,
+      "reps": "[1,2]",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 242,
+      "block_template_id": 117,
+      "reps": "[1,2]",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 243,
+      "block_template_id": 117,
+      "reps": "[1,2]",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 244,
+      "block_template_id": 117,
+      "reps": "[1,2]",
+      "sets": 2,
+      "percent": 0.9,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 245,
+      "block_template_id": 118,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 246,
+      "block_template_id": 118,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 247,
+      "block_template_id": 118,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 248,
+      "block_template_id": 118,
+      "reps": "2",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 249,
+      "block_template_id": 119,
+      "reps": "4",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 250,
+      "block_template_id": 119,
+      "reps": "4",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 251,
+      "block_template_id": 119,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 252,
+      "block_template_id": 119,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-17 01:23:06 UTC",
+      "updated_at": "2020-07-17 01:23:06 UTC"
+    },
+    {
+      "id": 253,
+      "block_template_id": 120,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": 45,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC"
+    },
+    {
+      "id": 254,
+      "block_template_id": 121,
+      "reps": "4",
+      "sets": 1,
+      "percent": null,
+      "weight": 45,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC"
+    },
+    {
+      "id": 255,
+      "block_template_id": 121,
+      "reps": "4",
+      "sets": 4,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC"
+    },
+    {
+      "id": 256,
+      "block_template_id": 122,
+      "reps": "4",
+      "sets": 2,
+      "percent": 0.4,
+      "weight": null,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC"
+    },
+    {
+      "id": 257,
+      "block_template_id": 122,
+      "reps": "4",
+      "sets": 4,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC"
+    },
+    {
+      "id": 258,
+      "block_template_id": 123,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC"
+    },
+    {
+      "id": 259,
+      "block_template_id": 124,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-17 01:43:41 UTC",
+      "updated_at": "2020-07-17 01:43:41 UTC"
+    },
+    {
+      "id": 260,
+      "block_template_id": 125,
+      "reps": "10",
+      "sets": 2,
+      "percent": null,
+      "weight": 10,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC"
+    },
+    {
+      "id": 261,
+      "block_template_id": 126,
+      "reps": "4",
+      "sets": 4,
+      "percent": 0.4,
+      "weight": null,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC"
+    },
+    {
+      "id": 262,
+      "block_template_id": 127,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC"
+    },
+    {
+      "id": 263,
+      "block_template_id": 127,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC"
+    },
+    {
+      "id": 264,
+      "block_template_id": 127,
+      "reps": "2",
+      "sets": 3,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC"
+    },
+    {
+      "id": 265,
+      "block_template_id": 128,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC"
+    },
+    {
+      "id": 266,
+      "block_template_id": 128,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC"
+    },
+    {
+      "id": 267,
+      "block_template_id": 128,
+      "reps": "[2,2]",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 02:23:07 UTC",
+      "updated_at": "2020-07-17 02:23:07 UTC"
+    },
+    {
+      "id": 268,
+      "block_template_id": 128,
+      "reps": "[2,2]",
+      "sets": 1,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-17 02:23:08 UTC",
+      "updated_at": "2020-07-17 02:23:08 UTC"
+    },
+    {
+      "id": 269,
+      "block_template_id": 129,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 02:23:08 UTC",
+      "updated_at": "2020-07-17 02:23:08 UTC"
+    },
+    {
+      "id": 270,
+      "block_template_id": 129,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-17 02:23:08 UTC",
+      "updated_at": "2020-07-17 02:23:08 UTC"
+    },
+    {
+      "id": 271,
+      "block_template_id": 129,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.9,
+      "weight": null,
+      "created_at": "2020-07-17 02:23:08 UTC",
+      "updated_at": "2020-07-17 02:23:08 UTC"
+    },
+    {
+      "id": 272,
+      "block_template_id": 129,
+      "reps": "2",
+      "sets": 2,
+      "percent": 1,
+      "weight": null,
+      "created_at": "2020-07-17 02:23:08 UTC",
+      "updated_at": "2020-07-17 02:23:08 UTC"
+    },
+    {
+      "id": 273,
+      "block_template_id": 130,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 274,
+      "block_template_id": 131,
+      "reps": "[4,4]",
+      "sets": 2,
+      "percent": 0.4,
+      "weight": null,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 275,
+      "block_template_id": 131,
+      "reps": "[3,2]",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 276,
+      "block_template_id": 131,
+      "reps": "[3,2]",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 277,
+      "block_template_id": 132,
+      "reps": "4",
+      "sets": 2,
+      "percent": 0.4,
+      "weight": null,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 278,
+      "block_template_id": 132,
+      "reps": "4",
+      "sets": 4,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 279,
+      "block_template_id": 133,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 280,
+      "block_template_id": 133,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 281,
+      "block_template_id": 133,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.9,
+      "weight": null,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 282,
+      "block_template_id": 133,
+      "reps": "2",
+      "sets": 2,
+      "percent": 1,
+      "weight": null,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 283,
+      "block_template_id": 133,
+      "reps": "1",
+      "sets": 1,
+      "percent": 1.05,
+      "weight": null,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 284,
+      "block_template_id": 134,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-17 02:30:50 UTC",
+      "updated_at": "2020-07-17 02:30:50 UTC"
+    },
+    {
+      "id": 285,
+      "block_template_id": 135,
+      "reps": "10",
+      "sets": 4,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 286,
+      "block_template_id": 136,
+      "reps": "6",
+      "sets": 2,
+      "percent": 0.4,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 287,
+      "block_template_id": 136,
+      "reps": "4",
+      "sets": 4,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 288,
+      "block_template_id": 137,
+      "reps": "4",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 289,
+      "block_template_id": 137,
+      "reps": "4",
+      "sets": 3,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 290,
+      "block_template_id": 137,
+      "reps": "3",
+      "sets": 3,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 291,
+      "block_template_id": 138,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 292,
+      "block_template_id": 138,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 293,
+      "block_template_id": 138,
+      "reps": "[2,2]",
+      "sets": 4,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 294,
+      "block_template_id": 139,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 295,
+      "block_template_id": 139,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 296,
+      "block_template_id": 139,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 297,
+      "block_template_id": 139,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 298,
+      "block_template_id": 139,
+      "reps": "2",
+      "sets": 3,
+      "percent": 0.9,
+      "weight": null,
+      "created_at": "2020-07-17 02:50:09 UTC",
+      "updated_at": "2020-07-17 02:50:09 UTC"
+    },
+    {
+      "id": 299,
+      "block_template_id": 140,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": 65,
+      "created_at": "2020-07-17 02:54:58 UTC",
+      "updated_at": "2020-07-17 02:54:58 UTC"
+    },
+    {
+      "id": 300,
+      "block_template_id": 141,
+      "reps": "4",
+      "sets": 6,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 02:54:58 UTC",
+      "updated_at": "2020-07-17 02:54:58 UTC"
+    },
+    {
+      "id": 301,
+      "block_template_id": 142,
+      "reps": "3",
+      "sets": 5,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-17 02:54:58 UTC",
+      "updated_at": "2020-07-17 02:54:58 UTC"
+    },
+    {
+      "id": 302,
+      "block_template_id": 143,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-17 02:54:58 UTC",
+      "updated_at": "2020-07-17 02:54:58 UTC"
+    },
+    {
+      "id": 303,
+      "block_template_id": 144,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-17 02:54:58 UTC",
+      "updated_at": "2020-07-17 02:54:58 UTC"
+    }
+  ],
+  "cycles": [
+    {
+      "id": 19,
+      "name": "TorokhtiyATG 202006",
+      "cycle_template_id": 1,
+      "start": "2020-07-16 14:04:26 UTC",
+      "end": null,
+      "references": [
+        {
+          "id": 1,
+          "name": "Body Weight",
+          "value": 155,
+          "created_at": "2020-07-16T02:49:45.885Z",
+          "updated_at": "2020-07-16T02:49:45.885Z"
+        },
+        {
+          "id": 2,
+          "name": "Max Snatch",
+          "value": 145,
+          "created_at": "2020-07-16T02:49:45.892Z",
+          "updated_at": "2020-07-16T02:49:45.892Z"
+        },
+        {
+          "id": 3,
+          "name": "Max Clean & Jerk",
+          "value": 185,
+          "created_at": "2020-07-16T02:49:45.897Z",
+          "updated_at": "2020-07-16T02:49:45.897Z"
+        },
+        {
+          "id": 4,
+          "name": "Max Back Squat",
+          "value": 205,
+          "created_at": "2020-07-16T02:49:45.903Z",
+          "updated_at": "2020-07-16T02:49:45.903Z"
+        },
+        {
+          "id": 5,
+          "name": "Max Front Squat",
+          "value": 195,
+          "created_at": "2020-07-16T02:49:45.908Z",
+          "updated_at": "2020-07-16T02:49:45.908Z"
+        }
+      ],
+      "created_at": "2020-07-16 14:04:26 UTC",
+      "updated_at": "2020-07-16 14:05:12 UTC"
+    }
+  ],
+  "workouts": [
+    {
+      "id": 15,
+      "name": "TorATG W3 Fri",
+      "cycle_id": 19,
+      "workout_template_id": 14,
+      "start": "2020-07-16 14:05:12 UTC",
+      "end": "2020-07-16 15:47:32 UTC",
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 15:47:32 UTC"
+    }
+  ],
+  "blocks": [
+    {
+      "id": 56,
+      "workout_id": 15,
+      "exercise_id": 3,
+      "block_template_id": 40,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 14:05:12 UTC"
+    },
+    {
+      "id": 57,
+      "workout_id": 15,
+      "exercise_id": 18,
+      "block_template_id": 41,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 14:05:12 UTC"
+    },
+    {
+      "id": 58,
+      "workout_id": 15,
+      "exercise_id": 2,
+      "block_template_id": 42,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 14:05:12 UTC"
+    },
+    {
+      "id": 59,
+      "workout_id": 15,
+      "exercise_id": 6,
+      "block_template_id": 43,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 14:05:12 UTC"
+    }
+  ],
+  "rounds": [
+    {
+      "id": 111,
+      "block_id": 56,
+      "reps": "10",
+      "sets": 2,
+      "weight": null,
+      "round_template_id": 72,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 14:05:12 UTC"
+    },
+    {
+      "id": 112,
+      "block_id": 57,
+      "reps": "3",
+      "sets": 2,
+      "weight": 75,
+      "round_template_id": 73,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 15:47:32 UTC"
+    },
+    {
+      "id": 113,
+      "block_id": 57,
+      "reps": "3",
+      "sets": 1,
+      "weight": 90,
+      "round_template_id": 74,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 15:47:32 UTC"
+    },
+    {
+      "id": 114,
+      "block_id": 57,
+      "reps": "2",
+      "sets": 4,
+      "weight": 105,
+      "round_template_id": 75,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 15:47:32 UTC"
+    },
+    {
+      "id": 115,
+      "block_id": 58,
+      "reps": "[2,2]",
+      "sets": 2,
+      "weight": 95,
+      "round_template_id": 76,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 15:47:32 UTC"
+    },
+    {
+      "id": 116,
+      "block_id": 58,
+      "reps": "[2,2]",
+      "sets": 2,
+      "weight": 115,
+      "round_template_id": 77,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 15:47:32 UTC"
+    },
+    {
+      "id": 117,
+      "block_id": 58,
+      "reps": "[2,2]",
+      "sets": 2,
+      "weight": 130,
+      "round_template_id": 78,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 14:05:12 UTC"
+    },
+    {
+      "id": 118,
+      "block_id": 58,
+      "reps": "[2,1]",
+      "sets": 2,
+      "weight": 150,
+      "round_template_id": 79,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 15:47:32 UTC"
+    },
+    {
+      "id": 119,
+      "block_id": 58,
+      "reps": "[1,1]",
+      "sets": 1,
+      "weight": 170,
+      "round_template_id": 80,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 15:47:32 UTC"
+    },
+    {
+      "id": 120,
+      "block_id": 59,
+      "reps": "3",
+      "sets": 2,
+      "weight": 135,
+      "round_template_id": 81,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 15:47:32 UTC"
+    },
+    {
+      "id": 121,
+      "block_id": 59,
+      "reps": "3",
+      "sets": 1,
+      "weight": 150,
+      "round_template_id": 82,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 15:47:32 UTC"
+    },
+    {
+      "id": 122,
+      "block_id": 59,
+      "reps": "3",
+      "sets": 4,
+      "weight": 185,
+      "round_template_id": 83,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-16 14:05:12 UTC",
+      "updated_at": "2020-07-16 15:47:32 UTC"
+    }
+  ]
+}

@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-import {
-Typography,
-Button,
-List
-} from '@material-ui/core';
+import { Typography, Button, List } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
-import { Delete as DeleteIcon, Add as AddIcon } from '@material-ui/icons';
-import ExplicitIcon from '@material-ui/icons/Explicit';
+import { Add as AddIcon, Explicit as ExplicitIcon } from '@material-ui/icons';
 
 import Exercise from './Exercise';
 import ExerciseForm from './ExerciseForm';
@@ -54,7 +49,7 @@ class Exercises extends Component {
                   exercise={e}
                   references={references}
                   updateExercise={updateExercise}
-                  onDelete={() => {deleteExercise(e)}}
+                  onDelete={() => {if (window.confirm("Are you sure?")) deleteExercise(e);}}
                   key={e.id}
                 />
               )

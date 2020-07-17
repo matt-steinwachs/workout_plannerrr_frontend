@@ -190,7 +190,7 @@ class App extends React.Component {
   }
 
   async deleteRecord(record_name, body){
-    let resp = await this.fetch('delete', `/${record_name}/${body.id}`) || null;
+    await this.fetch('delete', `/${record_name}/${body.id}`);
 
     this.setState((prevState) => {
       const i = prevState[record_name].findIndex((r) => (r.id == body.id));
@@ -318,6 +318,9 @@ class App extends React.Component {
                         this.updateRecord("cycles",body)
                       }}
                       endWorkout={(body) => {
+                        this.updateRecord("cycles",body)
+                      }}
+                      deleteWorkout={(body) => {
                         this.updateRecord("cycles",body)
                       }}
                     />

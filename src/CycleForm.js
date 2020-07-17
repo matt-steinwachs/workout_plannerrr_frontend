@@ -2,7 +2,7 @@ import React from 'react'
 import { Form } from 'react-final-form'
 import createDecorator from 'final-form-calculate'
 import { TextField, Select } from 'mui-rff';
-import { MenuItem, Button, Box, Grid, Typography} from '@material-ui/core';
+import { MenuItem, Button, Box, Grid } from '@material-ui/core';
 
 export default function CycleForm({cycle, cycle_templates, onSubmit, onClose}) {
   const calculator = createDecorator(

@@ -71,9 +71,6 @@ class Settings extends React.Component {
   }
 
   render() {
-    const exercise = this.props.exercise;
-    const references = this.props.references;
-
     return (
       <Grid container justify="space-between">
         <Grid item sm={4}>

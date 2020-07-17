@@ -2,10 +2,11 @@ import React, { Component, Fragment } from "react";
 
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import listPlugin from '@fullcalendar/list';
 import moment from 'moment';
 
-import {Button, IconButton, Grid, Paper, Typography, Box, Chip} from '@material-ui/core';
-import { Add as AddIcon, PlayArrow as PlayIcon, Settings as SettingsIcon, Timer as TimerIcon } from '@material-ui/icons';
+import {Button, Grid, Typography, Box, Chip} from '@material-ui/core';
+import { Add as AddIcon, PlayArrow as PlayIcon, Settings as SettingsIcon, Timer as TimerIcon, Delete as DeleteIcon } from '@material-ui/icons';
 import withStyles from '@material-ui/core/styles/withStyles';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 
@@ -31,12 +32,15 @@ class Planner extends Component {
     super(props);
 
     this.selectWorkout = this.selectWorkout.bind(this);
+    this.selectCycle = this.selectCycle.bind(this);
 
     this.state = {
       startingCycle: false,
       startingWorkout: false,
       showingWorkout: false,
-      selectedWorkout: null
+      selectedWorkout: null,
+      showingCycle: false,
+      selectedCycle: null
     }
   }
 
@@ -51,29 +55,62 @@ class Planner extends Component {
     });
   }
 
+  selectCycle(cycle_id){
+    const cycle = this.props.cycles.find(c =>
+      c.id == cycle_id
+    );
+
+    this.setState({
+      showingCycle:true,
+      selectedCycle: cycle
+    });
+  }
+
   render() {
     const {
       cycles, cycle_templates, workout_templates, classes, exercises,
-      endCurrentCycle, startCycle, startWorkout, endWorkout,
+      endCurrentCycle, startCycle, startWorkout, endWorkout, deleteWorkout
     } = this.props;
 
-    const {startingCycle, startingWorkout, showingWorkout, selectedWorkout} = this.state;
+    const {startingCycle, startingWorkout, showingWorkout, selectedWorkout, showingCycle} = this.state;
 
     const current_cycle = cycles.find(c => c.end === null);
 
     const current_cycle_template = cycle_templates.find(ct => current_cycle && ct.id === current_cycle.cycle_template_id);
     let events = [];
     cycles.forEach(c => {
-        events.push({id: "c-"+c.id, date: c.start, title: "Cycle Start: "+c.name, allDay: true})
-        events.push({id: "c-"+c.id, date: c.end, title: "Cycle End: "+c.name, allDay: true})
+        events.push({
+          id: "c-"+c.id,
+          date: c.start,
+          title: "Cycle Start: "+c.name,
+          allDay: true,
+          color: "green"
+        })
+        events.push({
+          id: "c-"+c.id,
+          date: c.end,
+          title: "Cycle End: "+c.name,
+          allDay: true,
+          color: "red"
+        })
       c.workouts.forEach(w =>
-        events.push({id: "c-"+c.id+"-w-"+w.id, start: w.start, end: w.end, title: w.name})
+        events.push({
+          id: "c-"+c.id+"-w-"+w.id,
+          start: w.start,
+          end: w.end,
+          title: w.name,
+          color: "blue"
+        })
       );
     });
 
     let current_workout = current_cycle && current_cycle.workouts.find(w => w.end === null);
 
+    let selectedWorkoutCycle = showingWorkout &&
+      cycles.find(c => c.id == selectedWorkout.cycle_id)
+    ;
 
+    let selectedCycle = this.state.selectedCycle || current_cycle;
 
     return (
       <div>
@@ -82,8 +119,9 @@ class Planner extends Component {
             <Typography style={{ display: 'flex', alignItems: 'center'}} component="h2" variant="h5" color="inherit" noWrap>
               <EventNoteIcon fontSize="large"/>
               {showingWorkout ?
-                "Viewing: "+selectedWorkout.name+" -- "+moment(selectedWorkout.start).format("LLLL")
+                "Viewing Workout: "+selectedWorkout.name+" -- "+moment(selectedWorkout.start).format("LLLL")
                 : startingCycle ? "New Cycle"
+                : showingCycle ? "Viewing Cycle: "+selectedCycle.name
                 : "Planner"
               }
             </Typography>
@@ -104,48 +142,81 @@ class Planner extends Component {
                     </Button>
                   </Box>
                 </Grid>
-                <Grid item xs={10}>
-                  <Box display="inline-block" ml={2} mt={2}>
+                <Grid item xs={8}>
+                  <Box ml={2} mt={2}>
                     <Chip icon={<TimerIcon />} label={moment.utc(moment(selectedWorkout.end).diff(moment(selectedWorkout.start))).format("HH:mm:ss")} />
+                  </Box>
+                </Grid>
+                <Grid item xs={2}>
+                  <Box mt={2} className={classes.pull_right}>
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      size="small"
+                      onClick={async () => {
+                        if (window.confirm("Are you sure?")){
+                          let ccopy = JSON.parse(JSON.stringify(selectedWorkoutCycle));
+                          ccopy.workouts.find(w => w.id == selectedWorkout.id)._destroy = 1;
+                          console.log(ccopy);
+                          ccopy.workouts_attributes = ccopy.workouts;
+                          delete ccopy.workouts;
+                          ccopy.workouts_attributes.forEach(w => {
+                            w.blocks_attributes = w.blocks;
+                            delete w.blocks;
+                            w.blocks_attributes.forEach(b => {
+                              b.rounds_attributes = b.rounds;
+                              delete b.rounds;
+                            });
+                          })
+                          await deleteWorkout(ccopy);
+                          this.setState({showingWorkout: false, selectedWorkout: null});
+                        }
+                      }}
+                    >
+                      <DeleteIcon />
+                    </Button>
                   </Box>
                 </Grid>
                 {selectedWorkout.blocks.map(b =>
                   <Grid item xs={12} md={6} lg={4} key={b.id} >
-                    <Block block={b} />
+                    <Block block={b} references={selectedWorkoutCycle.references} />
                   </Grid>
                 )}
               </Grid>
             : current_cycle != undefined ?
               <Grid container>
-                <Grid item xs={12}>
-                  <Typography component="h3" variant="h6" color="inherit" noWrap>Current Cycle: {current_cycle.name}</Typography>
-                </Grid>
-                {current_workout !== undefined ?
+                {!showingCycle &&
                   <Grid item xs={12}>
-                    <WorkoutForm
-                      workout={current_workout}
-                      cycle={current_cycle}
-                      cycle_template={current_cycle_template}
-                      exercises={exercises}
-                      workout_templates={workout_templates}
-                      onSubmit={async (body) => {
-                        let cccopy = {
-                          id: current_cycle.id,
-                          cycle: JSON.parse(JSON.stringify(current_cycle))
-                        };
-                        cccopy.cycle.workouts_attributes = cccopy.cycle.workouts
-                        delete cccopy.cycle.workouts;
-                        const wai = cccopy.cycle.workouts_attributes.findIndex(wa => wa.id == body.id);
-                        cccopy.cycle.workouts_attributes[wai] = body.workout;
-                        cccopy.cycle.workouts_attributes[wai].end = moment();
-                        await endWorkout(cccopy);
-                        this.setState({startingWorkout: false});
-                      }}
-                      onClose={() => {this.setState({startingWorkout: false})}}
-                    />
+                    <Typography component="h3" variant="h6" color="inherit" noWrap>Current Cycle: {current_cycle.name}</Typography>
                   </Grid>
-                  :
-                  startingWorkout ?
+                }
+
+                {
+                  current_workout !== undefined ?
+                    <Grid item xs={12}>
+                      <WorkoutForm
+                        workout={current_workout}
+                        cycle={current_cycle}
+                        cycle_template={current_cycle_template}
+                        exercises={exercises}
+                        workout_templates={workout_templates}
+                        onSubmit={async (body) => {
+                          let cccopy = {
+                            id: current_cycle.id,
+                            cycle: JSON.parse(JSON.stringify(current_cycle))
+                          };
+                          cccopy.cycle.workouts_attributes = cccopy.cycle.workouts
+                          delete cccopy.cycle.workouts;
+                          const wai = cccopy.cycle.workouts_attributes.findIndex(wa => wa.id == body.id);
+                          cccopy.cycle.workouts_attributes[wai] = body.workout;
+                          cccopy.cycle.workouts_attributes[wai].end = moment();
+                          await endWorkout(cccopy);
+                          this.setState({startingWorkout: false});
+                        }}
+                        onClose={() => {this.setState({startingWorkout: false})}}
+                      />
+                    </Grid>
+                  : startingWorkout ?
                     <Grid item xs={12}>
                       <WorkoutForm
                         cycle={current_cycle}
@@ -166,9 +237,88 @@ class Planner extends Component {
                         onClose={() => {this.setState({startingWorkout: false})}}
                       />
                     </Grid>
-                    :
-                    <Fragment>
+                  : showingCycle ?
+                    <Grid container>
                       <Grid item xs={10}>
+                        <Box mt={2}>
+                          <Button
+                            variant="contained"
+                            color="primary"
+                            size="small"
+                            onClick={() => {this.setState({showingCycle: false, selectedCycle: null})}}
+                          >
+                            Back
+                          </Button>
+                        </Box>
+                      </Grid>
+                      {selectedCycle.id == current_cycle.id &&
+                        <Grid item xs={2}>
+                          <Button
+                            className={classes.pull_right}
+                            variant="contained"
+                            color="secondary"
+                            type="button"
+                            onClick={() => {
+                              if (window.confirm("Are you sure?")){
+                                let cccopy = JSON.parse(JSON.stringify(current_cycle))
+                                cccopy.end = moment();
+                                endCurrentCycle(cccopy);
+                              }
+                            }}
+                          >
+                            End Cycle
+                          </Button>
+                        </Grid>
+                      }
+                      <Grid item xs={12}>
+                        <Box mt={2} ml={2}>
+                          <Typography  component="h3" color="inherit" noWrap>
+                            Started: {moment(selectedCycle.start).format("LL")}
+                          </Typography>
+                        </Box>
+                      </Grid>
+
+                      { selectedCycle.end &&
+                        <Grid item xs={12}>
+                          <Box mt={2} ml={2}>
+                            <Typography  component="h3" color="inherit" noWrap>
+                              Finished: {moment(selectedCycle.end).format("LL")}
+                            </Typography>
+                          </Box>
+                        </Grid>
+                      }
+
+                      <Grid item xs={12}>
+                        <Box mt={2} ml={2}>
+                          <Typography  component="h3" color="inherit" noWrap>
+                            Completed Workouts: {selectedCycle.workouts.length}
+                          </Typography>
+                        </Box>
+                      </Grid>
+
+                      { !selectedCycle.end &&
+                        <Grid item xs={12}>
+                          <Box mt={2} ml={2}>
+                            <Typography  component="h3" color="inherit" noWrap>
+                              Workouts Remaining: {workout_templates.filter(w => w.cycle_template_id == selectedCycle.cycle_template_id).length}
+                            </Typography>
+                          </Box>
+                        </Grid>
+                      }
+
+                      <Grid item xs={12}>
+                        <Box mt={2} ml={2}>
+                          { selectedCycle.references.map(r => (
+                            <Typography  component="h4" color="inherit" noWrap>
+                              {r.name}: {r.value}
+                            </Typography>
+                          ))}
+                        </Box>
+                      </Grid>
+                    </Grid>
+                  :
+                    <Fragment>
+                      <Grid item xs={12}>
                         <Box display="inline-block" mt={2}>
                           <Button
                             variant="contained"
@@ -179,32 +329,16 @@ class Planner extends Component {
                             Start Workout
                           </Button>
                         </Box>
-                        <Box display="inline-block" ml={3} mt={2}>
+                        <Box display="inline-block" ml={3} mt={2} className={classes.pull_right}>
                           <Button
                             variant="contained"
-                            onClick={() => {this.setState({startingWorkout: true})}}
+                            onClick={() => {this.setState({showingCycle:true})}}
                           >
                             <SettingsIcon />
                           </Button>
                         </Box>
                       </Grid>
-                      <Grid item xs={2}>
-                        <Button
-                          className={classes.pull_right}
-                          variant="contained"
-                          color="secondary"
-                          type="button"
-                          onClick={() => {
-                            if (window.confirm("Are you sure?")){
-                              let cccopy = JSON.parse(JSON.stringify(current_cycle))
-                              cccopy.end = moment();
-                              endCurrentCycle(cccopy);
-                            }
-                          }}
-                        >
-                          End Cycle
-                        </Button>
-                      </Grid>
+
                     </Fragment>
                 }
               </Grid>
@@ -233,9 +367,9 @@ class Planner extends Component {
 
           }
         </Grid>
-        {!startingCycle && !startingWorkout && current_workout === undefined && !showingWorkout &&
+        {!startingCycle && !startingWorkout && current_workout === undefined && !showingWorkout && !showingCycle &&
           <FullCalendar
-            plugins={[ dayGridPlugin ]}
+            plugins={[ dayGridPlugin, listPlugin]}
             initialView="dayGridMonth"
             events={events}
             eventClick={(e) => {
@@ -245,8 +379,14 @@ class Planner extends Component {
                 let workout_id = id_parts[3];
                 this.selectWorkout(cycle_id, workout_id);
               } else {
-
+                let cycle_id = id_parts[1];
+                this.selectCycle(cycle_id);
               }
+            }}
+            headerToolbar={{
+              left: 'prev,next today',
+              center: 'title',
+              right: 'dayGridMonth,listMonth'
             }}
             height="70vh"
           />

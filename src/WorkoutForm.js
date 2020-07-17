@@ -1,12 +1,11 @@
 import React, {useState, useMemo, Fragment} from 'react';
-import { Form, Field } from 'react-final-form';
+import { Form } from 'react-final-form';
 import arrayMutators from 'final-form-arrays';
 import { FieldArray } from 'react-final-form-arrays';
 import createDecorator from 'final-form-calculate';
 import { TextField, Autocomplete } from 'mui-rff';
-import { MenuItem, IconButton, Button, Box, Grid, Typography, Switch, FormControlLabel, Chip} from '@material-ui/core';
-import { Delete as DeleteIcon, Add as AddIcon, Timer as TimerIcon } from '@material-ui/icons';
-import moment from 'moment';
+import { Button, Box, Grid, Typography, Switch, FormControlLabel} from '@material-ui/core';
+
 import Timer from './Timer';
 
 export default function WorkoutForm({workout, cycle, cycle_template, exercises, workout_templates, onSubmit, onClose}) {
@@ -37,7 +36,6 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
 
 
   const [showAllWorkouts, setShowAllWorkouts] = useState(false);
-  // const [now, setNow] = useState(moment());
 
   return (
     <Form
@@ -124,6 +122,8 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                                       <Box ml={3}>
                                         {fields.map((name, index) => {
                                           let a = b.rounds_attributes[index];
+                                          if (a.weight == null)
+                                            console.log(a);
                                           return (
                                             <Box key={index} mb={2}>
                                               <Grid container spacing={3}>
@@ -145,7 +145,7 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                                                     required={true}
                                                   />
                                                 </Grid>
-                                                {a.weight != null &&
+                                                {(!a.hasOwnProperty('id') || a.weight != null) &&
                                                   <Grid item xs={2}>
                                                     <TextField
                                                       name={`${name}.weight`}
@@ -159,6 +159,16 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                                             </Box>
                                           )
                                         })}
+                                        <Button
+                                          type="button"
+                                          variant="contained"
+                                          size="small"
+                                          color="primary"
+                                          onClick={() => fields.push({block_id: b.id})}
+                                        >
+                                          Add Round
+                                        </Button>
+
                                       </Box>
                                     )}
                                   </FieldArray>
