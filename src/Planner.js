@@ -5,15 +5,17 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import listPlugin from '@fullcalendar/list';
 import moment from 'moment';
 
-import {Button, Grid, Typography, Box, Chip} from '@material-ui/core';
-import { Add as AddIcon, PlayArrow as PlayIcon, Settings as SettingsIcon, Timer as TimerIcon, Delete as DeleteIcon } from '@material-ui/icons';
+import {Button, Grid, Typography, Box} from '@material-ui/core';
+import { Add as AddIcon, PlayArrow as PlayIcon, Settings as SettingsIcon} from '@material-ui/icons';
 import withStyles from '@material-ui/core/styles/withStyles';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 
 import CycleForm from './CycleForm';
 import WorkoutForm from './WorkoutForm';
+import Workout from './Workout';
+import Cycle from './Cycle';
 
-import Block from './Block';
+
 
 const style = theme => ({
   top_buttons: {
@@ -129,60 +131,12 @@ class Planner extends Component {
 
           {
             showingWorkout ?
-              <Grid container>
-                <Grid item xs={2}>
-                  <Box mt={2}>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      size="small"
-                      onClick={() => {this.setState({showingWorkout: false, selectedWorkout: null})}}
-                    >
-                      Back
-                    </Button>
-                  </Box>
-                </Grid>
-                <Grid item xs={8}>
-                  <Box ml={2} mt={2}>
-                    <Chip icon={<TimerIcon />} label={moment.utc(moment(selectedWorkout.end).diff(moment(selectedWorkout.start))).format("HH:mm:ss")} />
-                  </Box>
-                </Grid>
-                <Grid item xs={2}>
-                  <Box mt={2} className={classes.pull_right}>
-                    <Button
-                      variant="contained"
-                      color="secondary"
-                      size="small"
-                      onClick={async () => {
-                        if (window.confirm("Are you sure?")){
-                          let ccopy = JSON.parse(JSON.stringify(selectedWorkoutCycle));
-                          ccopy.workouts.find(w => w.id == selectedWorkout.id)._destroy = 1;
-                          console.log(ccopy);
-                          ccopy.workouts_attributes = ccopy.workouts;
-                          delete ccopy.workouts;
-                          ccopy.workouts_attributes.forEach(w => {
-                            w.blocks_attributes = w.blocks;
-                            delete w.blocks;
-                            w.blocks_attributes.forEach(b => {
-                              b.rounds_attributes = b.rounds;
-                              delete b.rounds;
-                            });
-                          })
-                          await deleteWorkout(ccopy);
-                          this.setState({showingWorkout: false, selectedWorkout: null});
-                        }
-                      }}
-                    >
-                      <DeleteIcon />
-                    </Button>
-                  </Box>
-                </Grid>
-                {selectedWorkout.blocks.map(b =>
-                  <Grid item xs={12} md={6} lg={4} key={b.id} >
-                    <Block block={b} references={selectedWorkoutCycle.references} />
-                  </Grid>
-                )}
-              </Grid>
+              <Workout
+                workout={selectedWorkout}
+                cycle={selectedWorkoutCycle}
+                close={() => {this.setState({showingWorkout: false, selectedWorkout: null})}}
+                delete={deleteWorkout}
+              />
             : current_cycle != undefined ?
               <Grid container>
                 {!showingCycle &&
@@ -190,7 +144,6 @@ class Planner extends Component {
                     <Typography component="h3" variant="h6" color="inherit" noWrap>Current Cycle: {current_cycle.name}</Typography>
                   </Grid>
                 }
-
                 {
                   current_workout !== undefined ?
                     <Grid item xs={12}>
@@ -238,84 +191,14 @@ class Planner extends Component {
                       />
                     </Grid>
                   : showingCycle ?
-                    <Grid container>
-                      <Grid item xs={10}>
-                        <Box mt={2}>
-                          <Button
-                            variant="contained"
-                            color="primary"
-                            size="small"
-                            onClick={() => {this.setState({showingCycle: false, selectedCycle: null})}}
-                          >
-                            Back
-                          </Button>
-                        </Box>
-                      </Grid>
-                      {selectedCycle.id == current_cycle.id &&
-                        <Grid item xs={2}>
-                          <Button
-                            className={classes.pull_right}
-                            variant="contained"
-                            color="secondary"
-                            type="button"
-                            onClick={() => {
-                              if (window.confirm("Are you sure?")){
-                                let cccopy = JSON.parse(JSON.stringify(current_cycle))
-                                cccopy.end = moment();
-                                endCurrentCycle(cccopy);
-                              }
-                            }}
-                          >
-                            End Cycle
-                          </Button>
-                        </Grid>
-                      }
-                      <Grid item xs={12}>
-                        <Box mt={2} ml={2}>
-                          <Typography  component="h3" color="inherit" noWrap>
-                            Started: {moment(selectedCycle.start).format("LL")}
-                          </Typography>
-                        </Box>
-                      </Grid>
-
-                      { selectedCycle.end &&
-                        <Grid item xs={12}>
-                          <Box mt={2} ml={2}>
-                            <Typography  component="h3" color="inherit" noWrap>
-                              Finished: {moment(selectedCycle.end).format("LL")}
-                            </Typography>
-                          </Box>
-                        </Grid>
-                      }
-
-                      <Grid item xs={12}>
-                        <Box mt={2} ml={2}>
-                          <Typography  component="h3" color="inherit" noWrap>
-                            Completed Workouts: {selectedCycle.workouts.length}
-                          </Typography>
-                        </Box>
-                      </Grid>
-
-                      { !selectedCycle.end &&
-                        <Grid item xs={12}>
-                          <Box mt={2} ml={2}>
-                            <Typography  component="h3" color="inherit" noWrap>
-                              Workouts Remaining: {workout_templates.filter(w => w.cycle_template_id == selectedCycle.cycle_template_id).length}
-                            </Typography>
-                          </Box>
-                        </Grid>
-                      }
-
-                      <Grid item xs={12}>
-                        <Box mt={2} ml={2}>
-                          { selectedCycle.references.map(r => (
-                            <Typography  component="h4" color="inherit" noWrap>
-                              {r.name}: {r.value}
-                            </Typography>
-                          ))}
-                        </Box>
-                      </Grid>
-                    </Grid>
+                    <Cycle
+                      cycle={selectedCycle}
+                      isCurrentCycle={selectedCycle.id == current_cycle.id}
+                      workout_templates={workout_templates}
+                      close={() => {this.setState({showingCycle: false, selectedCycle: null})}}
+                      endCurrentCycle={endCurrentCycle}
+                      deleteCycle={() => {}}
+                    />
                   :
                     <Fragment>
                       <Grid item xs={12}>
@@ -367,6 +250,7 @@ class Planner extends Component {
 
           }
         </Grid>
+
         {!startingCycle && !startingWorkout && current_workout === undefined && !showingWorkout && !showingCycle &&
           <FullCalendar
             plugins={[ dayGridPlugin, listPlugin]}
@@ -391,7 +275,6 @@ class Planner extends Component {
             height="70vh"
           />
         }
-
       </div>
     );
   }
