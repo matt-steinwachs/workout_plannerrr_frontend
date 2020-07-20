@@ -11,7 +11,7 @@ export default function CycleTemplateForm({cycle_template, onSubmit, onClose}) {
       render={({ handleSubmit, form, submitting, pristine, values }) => (
         <form onSubmit={handleSubmit}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12}>
               <TextField
                 name="name"
                 label="Name"

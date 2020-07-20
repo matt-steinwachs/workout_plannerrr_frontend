@@ -22,6 +22,8 @@ export default function Block({block, references}) {
 
   const no_weights = block.rounds.filter(rt => rt.weight).length > 0;
 
+  const reference = references.find(ref => ref.id == block.exercise.reference_id)
+
   return (
     <TableContainer component={Box} p={2}>
       <Typography component="h2" variant="h5" color="inherit">
@@ -39,7 +41,7 @@ export default function Block({block, references}) {
         </TableHead>
         <TableBody>
           {block.rounds.map((r) => {
-            const percent = Math.floor(r.weight/(references.find(ref => ref.id == block.exercise.reference_id).value)*100);
+            const percent = Math.floor(r.weight/(reference.value)*100);
             return (
               <TableRow key={r.id}>
                 {no_weights &&

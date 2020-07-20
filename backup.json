@@ -288,6 +288,48 @@
       "reference_id": 3,
       "created_at": "2020-07-17 02:53:46 UTC",
       "updated_at": "2020-07-17 02:53:46 UTC"
+    },
+    {
+      "id": 44,
+      "name": "Overhead Squat",
+      "reference_id": 3,
+      "created_at": "2020-07-19 17:16:20 UTC",
+      "updated_at": "2020-07-19 17:16:20 UTC"
+    },
+    {
+      "id": 45,
+      "name": "Pull Ups",
+      "reference_id": 1,
+      "created_at": "2020-07-19 18:38:32 UTC",
+      "updated_at": "2020-07-19 18:38:32 UTC"
+    },
+    {
+      "id": 46,
+      "name": "Pause Snatch Deadlift",
+      "reference_id": 2,
+      "created_at": "2020-07-19 18:41:50 UTC",
+      "updated_at": "2020-07-19 18:41:50 UTC"
+    },
+    {
+      "id": 47,
+      "name": "Pause Clean Deadlift",
+      "reference_id": 3,
+      "created_at": "2020-07-19 18:42:02 UTC",
+      "updated_at": "2020-07-19 18:42:02 UTC"
+    },
+    {
+      "id": 48,
+      "name": "Snatch Balance",
+      "reference_id": 2,
+      "created_at": "2020-07-19 21:24:06 UTC",
+      "updated_at": "2020-07-19 21:24:06 UTC"
+    },
+    {
+      "id": 49,
+      "name": "Front Squat + Jerk",
+      "reference_id": 3,
+      "created_at": "2020-07-19 21:44:25 UTC",
+      "updated_at": "2020-07-19 21:44:25 UTC"
     }
   ],
   "cycle_templates": [
@@ -296,6 +338,24 @@
       "name": "TorokhtiyATG",
       "created_at": "2020-07-16 02:49:46 UTC",
       "updated_at": "2020-07-16 02:49:46 UTC"
+    },
+    {
+      "id": 3,
+      "name": "Everett OW - Simple Heavy",
+      "created_at": "2020-07-19 16:50:14 UTC",
+      "updated_at": "2020-07-19 17:18:37 UTC"
+    },
+    {
+      "id": 4,
+      "name": "Everett OW - Basic Beginner Program",
+      "created_at": "2020-07-19 18:36:16 UTC",
+      "updated_at": "2020-07-19 18:36:16 UTC"
+    },
+    {
+      "id": 5,
+      "name": "EMOMs",
+      "created_at": "2020-07-19 22:38:18 UTC",
+      "updated_at": "2020-07-19 22:38:18 UTC"
     }
   ],
   "workout_templates": [
@@ -318,9 +378,9 @@
     {
       "id": 11,
       "name": "C&J EMOM 20",
-      "cycle_template_id": null,
+      "cycle_template_id": 5,
       "created_at": "2020-07-16 02:49:46 UTC",
-      "updated_at": "2020-07-16 02:49:46 UTC",
+      "updated_at": "2020-07-19 22:38:25 UTC",
       "order": null
     },
     {
@@ -514,6 +574,118 @@
       "created_at": "2020-07-17 02:54:58 UTC",
       "updated_at": "2020-07-17 02:54:58 UTC",
       "order": 25
+    },
+    {
+      "id": 36,
+      "name": "EvOW SimpleHeavy Day 1",
+      "cycle_template_id": 3,
+      "created_at": "2020-07-19 17:00:13 UTC",
+      "updated_at": "2020-07-19 17:20:20 UTC",
+      "order": 0
+    },
+    {
+      "id": 37,
+      "name": "EvOW SimpleHeavy Day2",
+      "cycle_template_id": 3,
+      "created_at": "2020-07-19 17:16:36 UTC",
+      "updated_at": "2020-07-19 17:20:32 UTC",
+      "order": 1
+    },
+    {
+      "id": 38,
+      "name": "EvOW SimpleHeavy Day3",
+      "cycle_template_id": 3,
+      "created_at": "2020-07-19 17:21:57 UTC",
+      "updated_at": "2020-07-19 17:21:57 UTC",
+      "order": 2
+    },
+    {
+      "id": 39,
+      "name": "EvOW BBP Week1 Mon",
+      "cycle_template_id": 4,
+      "created_at": "2020-07-19 18:38:57 UTC",
+      "updated_at": "2020-07-19 18:38:57 UTC",
+      "order": 0
+    },
+    {
+      "id": 40,
+      "name": "EvOW BBP Week1 Tue",
+      "cycle_template_id": 4,
+      "created_at": "2020-07-19 18:50:26 UTC",
+      "updated_at": "2020-07-19 18:50:44 UTC",
+      "order": 1
+    },
+    {
+      "id": 41,
+      "name": "EvOW BBP Week1 Thu",
+      "cycle_template_id": 4,
+      "created_at": "2020-07-19 19:25:40 UTC",
+      "updated_at": "2020-07-19 19:25:40 UTC",
+      "order": 2
+    },
+    {
+      "id": 42,
+      "name": "EvOW BBP Week1 Fri",
+      "cycle_template_id": 4,
+      "created_at": "2020-07-19 19:27:50 UTC",
+      "updated_at": "2020-07-19 19:27:50 UTC",
+      "order": 3
+    },
+    {
+      "id": 43,
+      "name": "EvOW BBP Week2 Mon",
+      "cycle_template_id": 4,
+      "created_at": "2020-07-19 21:17:25 UTC",
+      "updated_at": "2020-07-19 21:17:25 UTC",
+      "order": 4
+    },
+    {
+      "id": 44,
+      "name": "EvOW BBP Week2 Tue",
+      "cycle_template_id": 4,
+      "created_at": "2020-07-19 21:20:40 UTC",
+      "updated_at": "2020-07-19 21:20:40 UTC",
+      "order": 5
+    },
+    {
+      "id": 45,
+      "name": "EvOW BBP Week2 Thu",
+      "cycle_template_id": 4,
+      "created_at": "2020-07-19 21:21:36 UTC",
+      "updated_at": "2020-07-19 21:21:36 UTC",
+      "order": 6
+    },
+    {
+      "id": 46,
+      "name": "EvOW BBP Week2 Fri",
+      "cycle_template_id": 4,
+      "created_at": "2020-07-19 21:25:08 UTC",
+      "updated_at": "2020-07-19 21:25:08 UTC",
+      "order": 7
+    },
+    {
+      "id": 47,
+      "name": "TorATG W5 Wed",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC",
+      "order": 26
+    },
+    {
+      "id": 48,
+      "name": "Snatch EMOM 20",
+      "cycle_template_id": 5,
+      "created_at": "2020-07-19 22:39:34 UTC",
+      "updated_at": "2020-07-19 22:39:34 UTC",
+      "order": 0
+    },
+    {
+      "id": 49,
+      "name": "TorATG W5 Thu",
+      "cycle_template_id": 1,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC",
+      "order": 27
     }
   ],
   "block_templates": [
@@ -1412,6 +1584,314 @@
       "exercise_id": 12,
       "created_at": "2020-07-17 02:54:58 UTC",
       "updated_at": "2020-07-17 02:54:58 UTC"
+    },
+    {
+      "id": 145,
+      "workout_template_id": 36,
+      "exercise_id": 1,
+      "created_at": "2020-07-19 17:00:13 UTC",
+      "updated_at": "2020-07-19 17:00:13 UTC"
+    },
+    {
+      "id": 146,
+      "workout_template_id": 36,
+      "exercise_id": 19,
+      "created_at": "2020-07-19 17:00:13 UTC",
+      "updated_at": "2020-07-19 17:00:13 UTC"
+    },
+    {
+      "id": 147,
+      "workout_template_id": 36,
+      "exercise_id": 7,
+      "created_at": "2020-07-19 17:00:13 UTC",
+      "updated_at": "2020-07-19 17:00:13 UTC"
+    },
+    {
+      "id": 148,
+      "workout_template_id": 37,
+      "exercise_id": 16,
+      "created_at": "2020-07-19 17:16:36 UTC",
+      "updated_at": "2020-07-19 17:16:36 UTC"
+    },
+    {
+      "id": 149,
+      "workout_template_id": 37,
+      "exercise_id": 21,
+      "created_at": "2020-07-19 17:16:36 UTC",
+      "updated_at": "2020-07-19 17:16:36 UTC"
+    },
+    {
+      "id": 150,
+      "workout_template_id": 37,
+      "exercise_id": 44,
+      "created_at": "2020-07-19 17:16:36 UTC",
+      "updated_at": "2020-07-19 17:16:36 UTC"
+    },
+    {
+      "id": 151,
+      "workout_template_id": 38,
+      "exercise_id": 2,
+      "created_at": "2020-07-19 17:21:57 UTC",
+      "updated_at": "2020-07-19 17:21:57 UTC"
+    },
+    {
+      "id": 152,
+      "workout_template_id": 38,
+      "exercise_id": 6,
+      "created_at": "2020-07-19 17:21:57 UTC",
+      "updated_at": "2020-07-19 17:21:57 UTC"
+    },
+    {
+      "id": 153,
+      "workout_template_id": 38,
+      "exercise_id": 17,
+      "created_at": "2020-07-19 17:21:57 UTC",
+      "updated_at": "2020-07-19 17:21:57 UTC"
+    },
+    {
+      "id": 154,
+      "workout_template_id": 39,
+      "exercise_id": 2,
+      "created_at": "2020-07-19 18:38:57 UTC",
+      "updated_at": "2020-07-19 18:38:57 UTC"
+    },
+    {
+      "id": 155,
+      "workout_template_id": 39,
+      "exercise_id": 1,
+      "created_at": "2020-07-19 18:38:57 UTC",
+      "updated_at": "2020-07-19 18:38:57 UTC"
+    },
+    {
+      "id": 156,
+      "workout_template_id": 39,
+      "exercise_id": 45,
+      "created_at": "2020-07-19 18:38:57 UTC",
+      "updated_at": "2020-07-19 18:38:57 UTC"
+    },
+    {
+      "id": 157,
+      "workout_template_id": 40,
+      "exercise_id": 46,
+      "created_at": "2020-07-19 18:50:26 UTC",
+      "updated_at": "2020-07-19 18:50:26 UTC"
+    },
+    {
+      "id": 158,
+      "workout_template_id": 40,
+      "exercise_id": 17,
+      "created_at": "2020-07-19 18:50:26 UTC",
+      "updated_at": "2020-07-19 18:50:26 UTC"
+    },
+    {
+      "id": 159,
+      "workout_template_id": 40,
+      "exercise_id": 21,
+      "created_at": "2020-07-19 18:50:26 UTC",
+      "updated_at": "2020-07-19 18:50:26 UTC"
+    },
+    {
+      "id": 160,
+      "workout_template_id": 41,
+      "exercise_id": 1,
+      "created_at": "2020-07-19 19:25:40 UTC",
+      "updated_at": "2020-07-19 19:25:40 UTC"
+    },
+    {
+      "id": 161,
+      "workout_template_id": 41,
+      "exercise_id": 2,
+      "created_at": "2020-07-19 19:26:10 UTC",
+      "updated_at": "2020-07-19 19:26:10 UTC"
+    },
+    {
+      "id": 162,
+      "workout_template_id": 41,
+      "exercise_id": 45,
+      "created_at": "2020-07-19 19:26:10 UTC",
+      "updated_at": "2020-07-19 19:26:10 UTC"
+    },
+    {
+      "id": 163,
+      "workout_template_id": 42,
+      "exercise_id": 44,
+      "created_at": "2020-07-19 19:27:50 UTC",
+      "updated_at": "2020-07-19 19:27:50 UTC"
+    },
+    {
+      "id": 164,
+      "workout_template_id": 42,
+      "exercise_id": 7,
+      "created_at": "2020-07-19 19:27:50 UTC",
+      "updated_at": "2020-07-19 19:27:50 UTC"
+    },
+    {
+      "id": 165,
+      "workout_template_id": 42,
+      "exercise_id": 6,
+      "created_at": "2020-07-19 19:27:50 UTC",
+      "updated_at": "2020-07-19 19:27:50 UTC"
+    },
+    {
+      "id": 166,
+      "workout_template_id": 43,
+      "exercise_id": 1,
+      "created_at": "2020-07-19 21:17:25 UTC",
+      "updated_at": "2020-07-19 21:17:25 UTC"
+    },
+    {
+      "id": 167,
+      "workout_template_id": 43,
+      "exercise_id": 2,
+      "created_at": "2020-07-19 21:17:25 UTC",
+      "updated_at": "2020-07-19 21:17:25 UTC"
+    },
+    {
+      "id": 168,
+      "workout_template_id": 43,
+      "exercise_id": 45,
+      "created_at": "2020-07-19 21:17:25 UTC",
+      "updated_at": "2020-07-19 21:17:25 UTC"
+    },
+    {
+      "id": 169,
+      "workout_template_id": 44,
+      "exercise_id": 47,
+      "created_at": "2020-07-19 21:20:40 UTC",
+      "updated_at": "2020-07-19 21:20:40 UTC"
+    },
+    {
+      "id": 170,
+      "workout_template_id": 44,
+      "exercise_id": 7,
+      "created_at": "2020-07-19 21:20:40 UTC",
+      "updated_at": "2020-07-19 21:20:40 UTC"
+    },
+    {
+      "id": 171,
+      "workout_template_id": 44,
+      "exercise_id": 42,
+      "created_at": "2020-07-19 21:20:40 UTC",
+      "updated_at": "2020-07-19 21:20:40 UTC"
+    },
+    {
+      "id": 172,
+      "workout_template_id": 45,
+      "exercise_id": 2,
+      "created_at": "2020-07-19 21:22:26 UTC",
+      "updated_at": "2020-07-19 21:22:26 UTC"
+    },
+    {
+      "id": 173,
+      "workout_template_id": 45,
+      "exercise_id": 1,
+      "created_at": "2020-07-19 21:22:26 UTC",
+      "updated_at": "2020-07-19 21:22:26 UTC"
+    },
+    {
+      "id": 174,
+      "workout_template_id": 45,
+      "exercise_id": 45,
+      "created_at": "2020-07-19 21:22:26 UTC",
+      "updated_at": "2020-07-19 21:22:26 UTC"
+    },
+    {
+      "id": 175,
+      "workout_template_id": 46,
+      "exercise_id": 48,
+      "created_at": "2020-07-19 21:25:08 UTC",
+      "updated_at": "2020-07-19 21:25:08 UTC"
+    },
+    {
+      "id": 176,
+      "workout_template_id": 46,
+      "exercise_id": 17,
+      "created_at": "2020-07-19 21:25:08 UTC",
+      "updated_at": "2020-07-19 21:25:08 UTC"
+    },
+    {
+      "id": 177,
+      "workout_template_id": 46,
+      "exercise_id": 19,
+      "created_at": "2020-07-19 21:25:08 UTC",
+      "updated_at": "2020-07-19 21:25:08 UTC"
+    },
+    {
+      "id": 178,
+      "workout_template_id": 47,
+      "exercise_id": 3,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 179,
+      "workout_template_id": 47,
+      "exercise_id": 14,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 180,
+      "workout_template_id": 47,
+      "exercise_id": 40,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 181,
+      "workout_template_id": 47,
+      "exercise_id": 49,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 182,
+      "workout_template_id": 47,
+      "exercise_id": 7,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 183,
+      "workout_template_id": 48,
+      "exercise_id": 1,
+      "created_at": "2020-07-19 22:39:34 UTC",
+      "updated_at": "2020-07-19 22:39:34 UTC"
+    },
+    {
+      "id": 184,
+      "workout_template_id": 49,
+      "exercise_id": 9,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC"
+    },
+    {
+      "id": 185,
+      "workout_template_id": 49,
+      "exercise_id": 31,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC"
+    },
+    {
+      "id": 186,
+      "workout_template_id": 49,
+      "exercise_id": 48,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC"
+    },
+    {
+      "id": 187,
+      "workout_template_id": 49,
+      "exercise_id": 8,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC"
+    },
+    {
+      "id": 188,
+      "workout_template_id": 49,
+      "exercise_id": 12,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC"
     }
   ],
   "round_templates": [
@@ -4184,6 +4664,566 @@
       "weight": null,
       "created_at": "2020-07-17 02:54:58 UTC",
       "updated_at": "2020-07-17 02:54:58 UTC"
+    },
+    {
+      "id": 304,
+      "block_template_id": 145,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 17:00:13 UTC",
+      "updated_at": "2020-07-19 17:00:13 UTC"
+    },
+    {
+      "id": 305,
+      "block_template_id": 146,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-19 17:00:13 UTC",
+      "updated_at": "2020-07-19 17:00:13 UTC"
+    },
+    {
+      "id": 306,
+      "block_template_id": 147,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-19 17:00:13 UTC",
+      "updated_at": "2020-07-19 17:00:13 UTC"
+    },
+    {
+      "id": 307,
+      "block_template_id": 148,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-19 17:16:36 UTC",
+      "updated_at": "2020-07-19 17:18:03 UTC"
+    },
+    {
+      "id": 308,
+      "block_template_id": 149,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 17:16:36 UTC",
+      "updated_at": "2020-07-19 17:18:03 UTC"
+    },
+    {
+      "id": 309,
+      "block_template_id": 150,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.75,
+      "weight": null,
+      "created_at": "2020-07-19 17:16:36 UTC",
+      "updated_at": "2020-07-19 17:18:03 UTC"
+    },
+    {
+      "id": 310,
+      "block_template_id": 151,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-19 17:21:57 UTC",
+      "updated_at": "2020-07-19 17:21:57 UTC"
+    },
+    {
+      "id": 311,
+      "block_template_id": 152,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.85,
+      "weight": null,
+      "created_at": "2020-07-19 17:21:57 UTC",
+      "updated_at": "2020-07-19 17:21:57 UTC"
+    },
+    {
+      "id": 312,
+      "block_template_id": 153,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-19 17:21:57 UTC",
+      "updated_at": "2020-07-19 17:21:57 UTC"
+    },
+    {
+      "id": 313,
+      "block_template_id": 154,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 18:38:57 UTC",
+      "updated_at": "2020-07-19 18:38:57 UTC"
+    },
+    {
+      "id": 314,
+      "block_template_id": 155,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 18:38:57 UTC",
+      "updated_at": "2020-07-19 18:38:57 UTC"
+    },
+    {
+      "id": 315,
+      "block_template_id": 156,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-19 18:38:57 UTC",
+      "updated_at": "2020-07-19 18:38:57 UTC"
+    },
+    {
+      "id": 316,
+      "block_template_id": 157,
+      "reps": "5",
+      "sets": 2,
+      "percent": 0.75,
+      "weight": null,
+      "created_at": "2020-07-19 18:50:26 UTC",
+      "updated_at": "2020-07-19 18:51:31 UTC"
+    },
+    {
+      "id": 317,
+      "block_template_id": 158,
+      "reps": "5",
+      "sets": 3,
+      "percent": 0.75,
+      "weight": null,
+      "created_at": "2020-07-19 18:50:26 UTC",
+      "updated_at": "2020-07-19 18:50:26 UTC"
+    },
+    {
+      "id": 318,
+      "block_template_id": 159,
+      "reps": "5",
+      "sets": 5,
+      "percent": 0.55,
+      "weight": null,
+      "created_at": "2020-07-19 18:50:26 UTC",
+      "updated_at": "2020-07-19 18:50:26 UTC"
+    },
+    {
+      "id": 319,
+      "block_template_id": 160,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 19:25:40 UTC",
+      "updated_at": "2020-07-19 19:25:40 UTC"
+    },
+    {
+      "id": 320,
+      "block_template_id": 161,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 19:26:10 UTC",
+      "updated_at": "2020-07-19 19:26:10 UTC"
+    },
+    {
+      "id": 321,
+      "block_template_id": 162,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-19 19:26:10 UTC",
+      "updated_at": "2020-07-19 19:26:10 UTC"
+    },
+    {
+      "id": 322,
+      "block_template_id": 163,
+      "reps": "5",
+      "sets": 3,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 19:27:50 UTC",
+      "updated_at": "2020-07-19 19:27:50 UTC"
+    },
+    {
+      "id": 323,
+      "block_template_id": 164,
+      "reps": "5",
+      "sets": 3,
+      "percent": 0.75,
+      "weight": null,
+      "created_at": "2020-07-19 19:27:50 UTC",
+      "updated_at": "2020-07-19 19:27:50 UTC"
+    },
+    {
+      "id": 324,
+      "block_template_id": 165,
+      "reps": "5",
+      "sets": 3,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-19 19:27:50 UTC",
+      "updated_at": "2020-07-19 19:27:50 UTC"
+    },
+    {
+      "id": 325,
+      "block_template_id": 166,
+      "reps": "15",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 21:17:25 UTC",
+      "updated_at": "2020-07-19 21:17:25 UTC"
+    },
+    {
+      "id": 326,
+      "block_template_id": 167,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 21:17:25 UTC",
+      "updated_at": "2020-07-19 21:17:25 UTC"
+    },
+    {
+      "id": 327,
+      "block_template_id": 168,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-19 21:17:25 UTC",
+      "updated_at": "2020-07-19 21:18:03 UTC"
+    },
+    {
+      "id": 328,
+      "block_template_id": 169,
+      "reps": "5",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-19 21:20:40 UTC",
+      "updated_at": "2020-07-19 21:20:40 UTC"
+    },
+    {
+      "id": 329,
+      "block_template_id": 170,
+      "reps": "3",
+      "sets": 5,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-19 21:20:40 UTC",
+      "updated_at": "2020-07-19 21:20:40 UTC"
+    },
+    {
+      "id": 330,
+      "block_template_id": 171,
+      "reps": "5",
+      "sets": 5,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-19 21:20:40 UTC",
+      "updated_at": "2020-07-19 21:20:40 UTC"
+    },
+    {
+      "id": 331,
+      "block_template_id": 172,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 21:22:26 UTC",
+      "updated_at": "2020-07-19 21:22:26 UTC"
+    },
+    {
+      "id": 332,
+      "block_template_id": 173,
+      "reps": "1",
+      "sets": 15,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 21:22:26 UTC",
+      "updated_at": "2020-07-19 21:22:26 UTC"
+    },
+    {
+      "id": 333,
+      "block_template_id": 174,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-19 21:22:26 UTC",
+      "updated_at": "2020-07-19 21:22:26 UTC"
+    },
+    {
+      "id": 334,
+      "block_template_id": 175,
+      "reps": "5",
+      "sets": 3,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 21:25:08 UTC",
+      "updated_at": "2020-07-19 21:25:08 UTC"
+    },
+    {
+      "id": 335,
+      "block_template_id": 176,
+      "reps": "5",
+      "sets": 3,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-19 21:25:08 UTC",
+      "updated_at": "2020-07-19 21:25:08 UTC"
+    },
+    {
+      "id": 336,
+      "block_template_id": 177,
+      "reps": "5",
+      "sets": 3,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-19 21:25:08 UTC",
+      "updated_at": "2020-07-19 21:25:08 UTC"
+    },
+    {
+      "id": 337,
+      "block_template_id": 178,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 338,
+      "block_template_id": 179,
+      "reps": "4",
+      "sets": 2,
+      "percent": 0.4,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 339,
+      "block_template_id": 179,
+      "reps": "4",
+      "sets": 3,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 340,
+      "block_template_id": 179,
+      "reps": "4",
+      "sets": 4,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 341,
+      "block_template_id": 180,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 342,
+      "block_template_id": 180,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 343,
+      "block_template_id": 180,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 344,
+      "block_template_id": 180,
+      "reps": "2",
+      "sets": 3,
+      "percent": 0.75,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 345,
+      "block_template_id": 181,
+      "reps": "[2,3]",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 346,
+      "block_template_id": 181,
+      "reps": "[2,2]",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 347,
+      "block_template_id": 181,
+      "reps": "[1,2]",
+      "sets": 4,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 348,
+      "block_template_id": 182,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 349,
+      "block_template_id": 182,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 350,
+      "block_template_id": 182,
+      "reps": "3",
+      "sets": 1,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 351,
+      "block_template_id": 182,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.8,
+      "weight": null,
+      "created_at": "2020-07-19 21:46:13 UTC",
+      "updated_at": "2020-07-19 21:46:13 UTC"
+    },
+    {
+      "id": 352,
+      "block_template_id": 183,
+      "reps": "1",
+      "sets": 20,
+      "percent": 0.85,
+      "weight": null,
+      "created_at": "2020-07-19 22:39:34 UTC",
+      "updated_at": "2020-07-19 22:39:50 UTC"
+    },
+    {
+      "id": 353,
+      "block_template_id": 184,
+      "reps": "10",
+      "sets": 3,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC"
+    },
+    {
+      "id": 354,
+      "block_template_id": 185,
+      "reps": "4",
+      "sets": 6,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC"
+    },
+    {
+      "id": 355,
+      "block_template_id": 186,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.5,
+      "weight": null,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC"
+    },
+    {
+      "id": 356,
+      "block_template_id": 186,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.6,
+      "weight": null,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC"
+    },
+    {
+      "id": 357,
+      "block_template_id": 186,
+      "reps": "3",
+      "sets": 2,
+      "percent": 0.7,
+      "weight": null,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC"
+    },
+    {
+      "id": 358,
+      "block_template_id": 187,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC"
+    },
+    {
+      "id": 359,
+      "block_template_id": 188,
+      "reps": "10",
+      "sets": 10,
+      "percent": null,
+      "weight": null,
+      "created_at": "2020-07-19 22:57:28 UTC",
+      "updated_at": "2020-07-19 22:57:28 UTC"
     }
   ],
   "cycles": [
@@ -4191,7 +5231,7 @@
       "id": 19,
       "name": "TorokhtiyATG 202006",
       "cycle_template_id": 1,
-      "start": "2020-07-16 14:04:26 UTC",
+      "start": "2020-06-01 14:33:24 UTC",
       "end": null,
       "references": [
         {
@@ -4231,7 +5271,7 @@
         }
       ],
       "created_at": "2020-07-16 14:04:26 UTC",
-      "updated_at": "2020-07-16 14:05:12 UTC"
+      "updated_at": "2020-07-18 17:46:30 UTC"
     }
   ],
   "workouts": [
@@ -4244,6 +5284,26 @@
       "end": "2020-07-16 15:47:32 UTC",
       "created_at": "2020-07-16 14:05:12 UTC",
       "updated_at": "2020-07-16 15:47:32 UTC"
+    },
+    {
+      "id": 18,
+      "name": "TorATG W2 Thu",
+      "cycle_id": 19,
+      "workout_template_id": 21,
+      "start": "2020-07-17 14:07:55 UTC",
+      "end": "2020-07-17 15:31:39 UTC",
+      "created_at": "2020-07-17 14:07:55 UTC",
+      "updated_at": "2020-07-17 15:31:39 UTC"
+    },
+    {
+      "id": 19,
+      "name": "TorATG W3 Sat",
+      "cycle_id": 19,
+      "workout_template_id": 27,
+      "start": "2020-07-18 17:46:30 UTC",
+      "end": "2020-07-18 19:30:30 UTC",
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 19:30:30 UTC"
     }
   ],
   "blocks": [
@@ -4286,6 +5346,96 @@
       "end": null,
       "created_at": "2020-07-16 14:05:12 UTC",
       "updated_at": "2020-07-16 14:05:12 UTC"
+    },
+    {
+      "id": 72,
+      "workout_id": 18,
+      "exercise_id": 9,
+      "block_template_id": 73,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-17 14:07:55 UTC",
+      "updated_at": "2020-07-17 14:07:55 UTC"
+    },
+    {
+      "id": 73,
+      "workout_id": 18,
+      "exercise_id": 1,
+      "block_template_id": 74,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-17 14:07:55 UTC",
+      "updated_at": "2020-07-17 14:07:55 UTC"
+    },
+    {
+      "id": 74,
+      "workout_id": 18,
+      "exercise_id": 2,
+      "block_template_id": 75,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-17 14:07:55 UTC",
+      "updated_at": "2020-07-17 14:07:55 UTC"
+    },
+    {
+      "id": 75,
+      "workout_id": 18,
+      "exercise_id": 19,
+      "block_template_id": 76,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-17 14:07:55 UTC",
+      "updated_at": "2020-07-17 14:07:55 UTC"
+    },
+    {
+      "id": 76,
+      "workout_id": 19,
+      "exercise_id": 9,
+      "block_template_id": 100,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 17:46:30 UTC"
+    },
+    {
+      "id": 77,
+      "workout_id": 19,
+      "exercise_id": 21,
+      "block_template_id": 101,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 17:46:30 UTC"
+    },
+    {
+      "id": 78,
+      "workout_id": 19,
+      "exercise_id": 7,
+      "block_template_id": 102,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 17:46:30 UTC"
+    },
+    {
+      "id": 79,
+      "workout_id": 19,
+      "exercise_id": 12,
+      "block_template_id": 103,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 17:46:30 UTC"
+    },
+    {
+      "id": 80,
+      "workout_id": 19,
+      "exercise_id": 8,
+      "block_template_id": 104,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 17:46:30 UTC"
     }
   ],
   "rounds": [
@@ -4432,6 +5582,162 @@
       "end": null,
       "created_at": "2020-07-16 14:05:12 UTC",
       "updated_at": "2020-07-16 15:47:32 UTC"
+    },
+    {
+      "id": 155,
+      "block_id": 72,
+      "reps": "10",
+      "sets": 4,
+      "weight": 65,
+      "round_template_id": 152,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-17 14:07:55 UTC",
+      "updated_at": "2020-07-17 14:07:55 UTC"
+    },
+    {
+      "id": 156,
+      "block_id": 73,
+      "reps": "4",
+      "sets": 6,
+      "weight": 65,
+      "round_template_id": 153,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-17 14:07:55 UTC",
+      "updated_at": "2020-07-17 15:31:39 UTC"
+    },
+    {
+      "id": 157,
+      "block_id": 74,
+      "reps": "[2,2]",
+      "sets": 6,
+      "weight": 95,
+      "round_template_id": 154,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-17 14:07:55 UTC",
+      "updated_at": "2020-07-17 15:31:39 UTC"
+    },
+    {
+      "id": 158,
+      "block_id": 75,
+      "reps": "3",
+      "sets": 4,
+      "weight": 95,
+      "round_template_id": 155,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-17 14:07:55 UTC",
+      "updated_at": "2020-07-17 15:31:39 UTC"
+    },
+    {
+      "id": 159,
+      "block_id": 76,
+      "reps": "10",
+      "sets": 3,
+      "weight": 65,
+      "round_template_id": 202,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 17:46:30 UTC"
+    },
+    {
+      "id": 160,
+      "block_id": 77,
+      "reps": "3",
+      "sets": 2,
+      "weight": 95,
+      "round_template_id": 203,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 19:30:30 UTC"
+    },
+    {
+      "id": 161,
+      "block_id": 77,
+      "reps": "3",
+      "sets": 2,
+      "weight": 115,
+      "round_template_id": 204,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 19:30:30 UTC"
+    },
+    {
+      "id": 162,
+      "block_id": 77,
+      "reps": "3",
+      "sets": 4,
+      "weight": 135,
+      "round_template_id": 205,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 19:30:30 UTC"
+    },
+    {
+      "id": 163,
+      "block_id": 78,
+      "reps": "3",
+      "sets": 2,
+      "weight": 120,
+      "round_template_id": 206,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 19:30:30 UTC"
+    },
+    {
+      "id": 164,
+      "block_id": 78,
+      "reps": "3",
+      "sets": 1,
+      "weight": 140,
+      "round_template_id": 207,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 19:30:30 UTC"
+    },
+    {
+      "id": 165,
+      "block_id": 78,
+      "reps": "3",
+      "sets": 4,
+      "weight": 170,
+      "round_template_id": 208,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 19:30:30 UTC"
+    },
+    {
+      "id": 166,
+      "block_id": 79,
+      "reps": "10",
+      "sets": 10,
+      "weight": null,
+      "round_template_id": 209,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 17:46:30 UTC"
+    },
+    {
+      "id": 167,
+      "block_id": 80,
+      "reps": "10",
+      "sets": 10,
+      "weight": null,
+      "round_template_id": 210,
+      "start": null,
+      "end": null,
+      "created_at": "2020-07-18 17:46:30 UTC",
+      "updated_at": "2020-07-18 17:46:30 UTC"
     }
   ]
 }

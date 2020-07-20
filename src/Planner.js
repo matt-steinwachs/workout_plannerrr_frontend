@@ -159,7 +159,7 @@ class Planner extends Component {
               workout={selectedWorkout}
               cycle={selectedWorkoutCycle}
               close={() => {this.setState({showingWorkout: false, selectedWorkout: null})}}
-              delete={deleteWorkout}
+              deleteWorkout={deleteWorkout}
             />
           : current_cycle != undefined ?
             <Grid container>

@@ -26,7 +26,7 @@ export default function CycleForm({cycle, cycle_templates, onSubmit, onClose}) {
           <Grid container spacing={3}>
 
 
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12}>
               <Select
                 name="cycle.cycle_template_id" label="Cycle Template" required={true}
               >

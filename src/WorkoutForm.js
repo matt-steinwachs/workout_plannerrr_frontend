@@ -107,12 +107,15 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                       <Box ml={3}>
                         {fields.map((name, index) => {
                           let b = values.workout.blocks_attributes[index];
+                          let e = exercises.find(ex => ex.id == b.exercise_id);
+                          let r = cycle.references.find(ref => ref.id == e.reference_id)
+
                           return (
                             <Box key={index} mb={2}>
                               <Grid container spacing={3}>
                                 <Grid item xs={12}>
                                   <Typography component="h4" variant="h6" color="inherit" noWrap>
-                                    {exercises.find(e => e.id == values.workout.blocks_attributes[index].exercise_id).name}
+                                    {e.name}
                                   </Typography>
                                 </Grid>
 
@@ -122,8 +125,7 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                                       <Box ml={3}>
                                         {fields.map((name, index) => {
                                           let a = b.rounds_attributes[index];
-                                          if (a.weight == null)
-                                            console.log(a);
+                                          const percent = Math.floor((a.weight/r.value)*100)
                                           return (
                                             <Box key={index} mb={2}>
                                               <Grid container spacing={3}>
@@ -153,6 +155,7 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                                                       placeholder="Weight"
                                                       size="small"
                                                     />
+                                                    ({percent}%)
                                                   </Grid>
                                                 }
                                               </Grid>

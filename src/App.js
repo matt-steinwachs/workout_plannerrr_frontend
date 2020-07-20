@@ -119,6 +119,7 @@ class App extends React.Component {
     const panes = JSON.parse(window.localStorage.getItem("panes"));
     this.state = {
       drawerOpen: panes.drawerOpen,
+      panes:panes,
       showExercises: panes.showExercises,
       showReferences: panes.showReferences,
       showWorkouts: panes.showWorkouts,
@@ -219,7 +220,6 @@ class App extends React.Component {
 
     const { classes } = this.props;
     const md_full = showReferences || showCycles ? 8 : 12;
-    const lg_full = showReferences || showCycles ? 9 : 12;
 
 
     return (
@@ -304,7 +304,7 @@ class App extends React.Component {
           <div className={classes.appBarSpacer} />
           <Container maxWidth="lg" className={classes.container}>
             <Grid container spacing={2}>
-              <Grid item xs={12} md={md_full} lg={lg_full}>
+              <Grid item xs={12} md={md_full}>
                 {showPlanner &&
                   <Paper className={classes.paper}>
                     <Planner
@@ -361,7 +361,7 @@ class App extends React.Component {
                 }
               </Grid>
 
-              <Grid item xs={12} md={4} lg={3}>
+              <Grid item xs={12} md={4}>
                 {showCycles &&
                   <Paper className={classes.paper}>
                     <CycleTemplates
