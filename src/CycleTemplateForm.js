@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form } from 'react-final-form'
-import { TextField } from 'mui-rff';
+import { TextField, Switches} from 'mui-rff';
 import { Button, Box, Grid} from '@material-ui/core';
 
 export default function CycleTemplateForm({cycle_template, onSubmit, onClose}) {
@@ -17,6 +17,13 @@ export default function CycleTemplateForm({cycle_template, onSubmit, onClose}) {
                 label="Name"
                 placeholder="Cycle Name"
                 required={true}
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <Switches
+                name="hide_completed"
+                data={{label: 'Hide Completed Workouts', value: true}}
               />
             </Grid>
 

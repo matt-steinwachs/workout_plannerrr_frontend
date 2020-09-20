@@ -4,11 +4,21 @@ import arrayMutators from 'final-form-arrays';
 import { FieldArray } from 'react-final-form-arrays';
 import createDecorator from 'final-form-calculate';
 import { TextField, Autocomplete } from 'mui-rff';
-import { Button, Box, Grid, Typography, Switch, FormControlLabel} from '@material-ui/core';
+import { Button, Box, Grid, Typography, Switch, FormControlLabel, Divider} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
 import Timer from './Timer';
+import BlockTemplate from './BlockTemplate';
+import Workout from './Workout';
 
-export default function WorkoutForm({workout, cycle, cycle_template, exercises, workout_templates, onSubmit, onClose}) {
+const useStyles = makeStyles({
+  compact: {
+    margin: 0
+  },
+});
+
+export default function WorkoutForm({workout, cycle, cycle_template, exercises, workout_templates, cycles, onSubmit, onClose}) {
+  const classes = useStyles();
   const initVal = workout ? {
     id: workout.id,
     workout: {
@@ -57,10 +67,11 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                     required={true}
                     options={showAllWorkouts ?
                       workout_templates
-                      :
-                      workout_templates.filter(wt => wt.cycle_template_id == cycle_template.id).filter(wt => (
-                        !cycle.workouts.map(w => w.workout_template_id).includes(wt.id)
-                      ))
+                      : cycle_template.hide_completed ?
+                        workout_templates.filter(wt => wt.cycle_template_id == cycle_template.id).filter(wt => (
+                          !cycle.workouts.map(w => w.workout_template_id).includes(wt.id)
+                        ))
+                      : workout_templates.filter(wt => wt.cycle_template_id == cycle_template.id)
                     }
                     getOptionValue={option => option.id}
                     getOptionLabel={option => option.name}
@@ -85,9 +96,51 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                         inputProps={{ 'aria-label': 'primary checkbox' }}
                       />
                     }
-                    label={showAllWorkouts ? "Show remaining workouts in cycle": "Show all workouts"}
+                    label={"Show All"}
                   />
+                  { values.workout && <Divider/> }
                 </Grid>
+
+                {values.workout &&
+                  <Fragment>
+                    <Grid item xs={12} >
+                      <h3 className={classes.compact}>Template:</h3>
+                    </Grid>
+                    {
+                      workout_templates.find(wt => wt.id == values.workout.workout_template_id).block_templates.map(b =>
+                        <Grid item xs={12} md={6} lg={4} key={b.id} >
+                          <BlockTemplate block_template={b} />
+                        </Grid>
+                      )
+                    }
+                  </Fragment>
+                }
+
+                {values.workout &&
+                  (() => {
+                    let prev_wrks = [];
+                    cycles.forEach(c => {
+                      c.workouts.forEach(w => {
+                        if (w.workout_template_id == values.workout.workout_template_id){
+                          prev_wrks.push(w)
+                        }
+                      })
+                    })
+                    const last_wrk = prev_wrks[prev_wrks.length-1];
+
+                    return (
+                      <Grid item xs={12}>
+                        <h3>Previously completed {prev_wrks.length} times </h3>
+                        <h3 className={classes.compact}>Last Time:</h3>
+                        <Workout
+                          workout={last_wrk}
+                          cycle={cycles.find(c => (c.id == last_wrk.cycle_id))}
+                        />
+                      </Grid>
+                    )
+                  })()
+                }
+
 
               </Fragment>
               :
@@ -108,15 +161,26 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                         {fields.map((name, index) => {
                           let b = values.workout.blocks_attributes[index];
                           let e = exercises.find(ex => ex.id == b.exercise_id);
-                          let r = cycle.references.find(ref => ref.id == e.reference_id)
+
+                          let r = e && cycle.references.find(ref => ref.id == e.reference_id)
 
                           return (
                             <Box key={index} mb={2}>
                               <Grid container spacing={3}>
                                 <Grid item xs={12}>
-                                  <Typography component="h4" variant="h6" color="inherit" noWrap>
-                                    {e.name}
-                                  </Typography>
+                                  {e ?
+                                    <Typography component="h4" variant="h6" color="inherit" noWrap>
+                                      {e.name}
+                                    </Typography>
+                                    :
+                                    <Autocomplete
+                                      name={`${name}.exercise_id`} label="Exercise" required={true}
+                                      options={exercises}
+                                      getOptionValue={option => option.id}
+                                      getOptionLabel={option => option.name}
+                                    />
+                                  }
+
                                 </Grid>
 
                                 <Grid item xs={12}>
@@ -147,31 +211,32 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                                                     required={true}
                                                   />
                                                 </Grid>
-                                                {(!a.hasOwnProperty('id') || a.weight != null) &&
-                                                  <Grid item xs={2}>
-                                                    <TextField
-                                                      name={`${name}.weight`}
-                                                      label="Weight"
-                                                      placeholder="Weight"
-                                                      size="small"
-                                                    />
-                                                    ({percent}%)
-                                                  </Grid>
-                                                }
+
+                                                <Grid item xs={2}>
+                                                  <TextField
+                                                    name={`${name}.weight`}
+                                                    label="Weight"
+                                                    placeholder="Weight"
+                                                    size="small"
+                                                  />
+                                                  {!isNaN(percent) && `(${percent})%`}
+                                                </Grid>
+
                                               </Grid>
                                             </Box>
                                           )
                                         })}
-                                        <Button
-                                          type="button"
-                                          variant="contained"
-                                          size="small"
-                                          color="primary"
-                                          onClick={() => fields.push({block_id: b.id})}
-                                        >
-                                          Add Round
-                                        </Button>
-
+                                        {e &&
+                                          <Button
+                                            type="button"
+                                            variant="contained"
+                                            size="small"
+                                            color="primary"
+                                            onClick={() => fields.push({block_id: b.id})}
+                                          >
+                                            Add Round
+                                          </Button>
+                                        }
                                       </Box>
                                     )}
                                   </FieldArray>
@@ -181,6 +246,15 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                             </Box>
                           )
                         })}
+                        <Button
+                          type="button"
+                          variant="contained"
+                          size="small"
+                          color="primary"
+                          onClick={() => fields.push({workout_id: values.id})}
+                        >
+                          Add Exercise
+                        </Button>
                       </Box>
                     )}
                   </FieldArray>

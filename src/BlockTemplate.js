@@ -13,8 +13,10 @@ import {
 } from '@material-ui/core';
 
 const useStyles = makeStyles({
-  table: {
-  },
+  table: {},
+  exerciseContainer: {
+    paddingTop: "5px"
+  }
 });
 
 export default function BlockTemplate({block_template}) {
@@ -22,11 +24,10 @@ export default function BlockTemplate({block_template}) {
 
   const no_weights = block_template.round_templates.filter(rt => rt.percent || rt.weight).length > 0
   return (
-    <TableContainer component={Box} p={2}>
-      <Typography component="h2" variant="h5" color="inherit">
+    <TableContainer component={Box} p={2} className={classes.exerciseContainer}>
+      <Typography component="h2" variant="h6" color="inherit">
         {block_template.exercise.name}
       </Typography>
-
 
       <Table className={classes.table} size="small" aria-label="a dense table">
         <TableHead>

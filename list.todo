@@ -44,12 +44,13 @@
   ✔ show start, end, completed workouts, remaining workouts, references @done(2020-07-16 21:58)
 ✔ Break up planner into components and dry out display logic @done(2020-07-17 19:52)
 ✔ Show percentage of reference for the weights entered in the workoutform @done(2020-07-19 10:08)
-
-☐ Button to view workout_template from new workout form.
+✔ Button to view workout_template from new workout form. @done(2020-07-27 09:53)
 ☐ Button to view past instances of workout_template from new workout form.
 ☐ Timed work and rest per round
   ☐ Auto timer
   ☐ Pause button
-
 ☐ Cycle template description (optional)
 ☐ Workout template description (optional)
+✔ Bug: stop weight field in WorkoutForm from being hidden when null  @done(2020-07-22 09:27)
+✔ Add year list to planner calendar @done(2020-07-27 10:05)
+✔ Add ability to add blocks to workouts in progress @done(2020-07-28 09:07)

@@ -13,6 +13,7 @@ import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import ExplicitIcon from '@material-ui/icons/Explicit';
 import LoopIcon from '@material-ui/icons/Loop';
 import SettingsIcon from '@material-ui/icons/Settings';
+import AssessmentIcon from '@material-ui/icons/Assessment';
 
 import withStyles from '@material-ui/core/styles/withStyles';
 
@@ -21,6 +22,7 @@ import Exercises from './Exercises';
 import WorkoutTemplates from './WorkoutTemplates';
 import CycleTemplates from './CycleTemplates';
 import Planner from './Planner';
+import Charts from './Charts';
 import Settings from './Settings';
 
 const drawerWidth = 240;
@@ -118,14 +120,15 @@ class App extends React.Component {
 
     const panes = JSON.parse(window.localStorage.getItem("panes"));
     this.state = {
-      drawerOpen: panes.drawerOpen,
-      panes:panes,
-      showExercises: panes.showExercises,
-      showReferences: panes.showReferences,
-      showWorkouts: panes.showWorkouts,
-      showCycles: panes.showCycles,
-      showPlanner: panes.showPlanner,
-      showSettings: panes.showSettings,
+      drawerOpen: panes ? panes.drawerOpen : true,
+      panes: panes,
+      showExercises: panes ? panes.showExercises : false,
+      showReferences:  panes ? panes.showReferences : true,
+      showWorkouts:  panes ? panes.showWorkouts : false,
+      showCycles:  panes ? panes.showCycles : false,
+      showPlanner:  panes ? panes.showPlanner : true,
+      showCharts:  panes ? panes.showCharts : true,
+      showSettings:  panes ? panes.showSettings : false,
       references: [],
       exercises: [],
       cycle_templates: [],
@@ -214,7 +217,7 @@ class App extends React.Component {
   render(){
     const {
       drawerOpen,
-      showExercises, showReferences, showWorkouts, showCycles, showPlanner, showSettings,
+      showExercises, showReferences, showWorkouts, showCycles, showPlanner, showCharts, showSettings,
       exercises, cycle_templates, references, workout_templates, cycles
     } = this.state;
 
@@ -292,6 +295,12 @@ class App extends React.Component {
               </ListItemIcon>
               <ListItemText primary="Exercises" />
             </ListItem>
+            <ListItem button onClick={() => {this.setState({showCharts:!showCharts})}}>
+              <ListItemIcon>
+                <AssessmentIcon color={showCharts ? "primary" : "disabled"} />
+              </ListItemIcon>
+              <ListItemText primary="Charts" />
+            </ListItem>
             <ListItem button onClick={() => {this.setState({showSettings:!showSettings})}}>
               <ListItemIcon>
                 <SettingsIcon color={showSettings ? "primary" : "disabled"} />
@@ -350,6 +359,16 @@ class App extends React.Component {
                       addExercise={(body) => {this.addRecord("exercises",body)}}
                       updateExercise={(body) => {this.updateRecord("exercises",body)}}
                       deleteExercise={(body) => {this.deleteRecord("exercises",body)}}
+                    />
+                  </Paper>
+                }
+
+                {showCharts && exercises.length > 0 &&
+                  <Paper className={classes.paper}>
+                    <Charts
+                      cycles={cycles}
+                      exercises={exercises}
+                      references={references}
                     />
                   </Paper>
                 }
@@ -415,6 +434,7 @@ class App extends React.Component {
       showWorkouts: this.state.showWorkouts,
       showCycles: this.state.showCycles,
       showPlanner: this.state.showPlanner,
+      showCharts: this.state.showCharts,
       showSettings: this.state.showSettings
     }));
   }

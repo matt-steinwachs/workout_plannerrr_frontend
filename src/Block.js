@@ -15,6 +15,9 @@ import {
 const useStyles = makeStyles({
   table: {
   },
+  exerciseContainer: {
+    paddingTop: "5px"
+  }
 });
 
 export default function Block({block, references}) {
@@ -25,8 +28,8 @@ export default function Block({block, references}) {
   const reference = references.find(ref => ref.id == block.exercise.reference_id)
 
   return (
-    <TableContainer component={Box} p={2}>
-      <Typography component="h2" variant="h5" color="inherit">
+    <TableContainer component={Box} p={2} className={classes.exerciseContainer}>
+      <Typography component="h2" variant="h6" color="inherit">
         {block.exercise.name}
       </Typography>
 

@@ -81,21 +81,21 @@ class Planner extends Component {
     const current_cycle_template = cycle_templates.find(ct => current_cycle && ct.id === current_cycle.cycle_template_id);
     let events = [];
     cycles.forEach(c => {
-        events.push({
-          id: "c-"+c.id,
-          date: c.start,
-          title: "Cycle Start: "+c.name,
-          allDay: true,
-          color: "green"
-        })
-        events.push({
-          id: "c-"+c.id,
-          date: c.end,
-          title: "Cycle End: "+c.name,
-          allDay: true,
-          color: "red"
-        })
-      c.workouts.forEach(w =>
+      events.push({
+        id: "c-"+c.id,
+        date: c.start,
+        title: "Cycle Start: "+c.name,
+        allDay: true,
+        color: "green"
+      })
+      events.push({
+        id: "c-"+c.id,
+        date: c.end,
+        title: "Cycle End: "+c.name,
+        allDay: true,
+        color: "red"
+      })
+      c.workouts.forEach(w => {
         events.push({
           id: "c-"+c.id+"-w-"+w.id,
           start: w.start,
@@ -103,7 +103,7 @@ class Planner extends Component {
           title: w.name,
           color: "blue"
         })
-      );
+      });
     });
 
     let current_workout = current_cycle && current_cycle.workouts.find(w => w.end === null);
@@ -133,7 +133,12 @@ class Planner extends Component {
         headerToolbar={{
           left: 'prev,next today',
           center: 'title',
-          right: 'dayGridMonth,listMonth'
+          right: 'dayGridMonth listMonth listYear'
+        }}
+        buttonText={{
+          month:    'month grid',
+          listMonth: 'month list',
+          listYear: 'year list'
         }}
         height="70vh"
       />
@@ -200,6 +205,7 @@ class Planner extends Component {
                       cycle_template={current_cycle_template}
                       exercises={exercises}
                       workout_templates={workout_templates}
+                      cycles={cycles}
                       onSubmit={async (body) => {
                         let cccopy = {
                           id: current_cycle.id,
