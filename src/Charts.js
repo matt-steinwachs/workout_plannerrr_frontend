@@ -6,7 +6,6 @@ import {KeyboardDatePicker, MuiPickersUtilsProvider} from '@material-ui/pickers'
 
 import MomentUtils from '@date-io/moment';
 
-
 import moment from 'moment';
 
 import { ResponsiveLine } from '@nivo/line'
@@ -16,6 +15,7 @@ class Charts extends Component {
     super(props);
 
     this.prepData = this.prepData.bind(this);
+    this.prepMarkers = this.prepMarkers.bind(this);
     this.setSelectedExercises = this.setSelectedExercises.bind(this);
 
     this.state = {
@@ -34,17 +34,29 @@ class Charts extends Component {
     selectedExercises.forEach(e => {
       let d = {
         "id": e.name,
-        "color": "hsl(293, 70%, 50%)",
         "data": []
       }
       cycles.forEach(c => {
         c.workouts.forEach(w => {
           w.blocks.forEach(b => {
-            if (e.id == b.exercise_id){
+            if (
+              e.id == b.exercise_id &&
+              moment(w.start).isSameOrAfter(moment(dateStart)) &&
+              moment(w.start).isSameOrBefore(moment(dateEnd).endOf('day'))
+            ){
+              let maxRound = null;
+              b.rounds.forEach(r => {
+                if (maxRound == null || maxRound.weight < r.weight){
+                  maxRound = r;
+                }
+              });
+
               d["data"].push(
                 {
                   "x": moment(w.start).format("YYYY-MM-DD"),
-                  "y": Math.max(...b.rounds.map(r => r.weight))
+                  "y": maxRound.weight,
+                  "reps": maxRound.reps,
+                  "sets": maxRound.sets
                 }
               )
             }
@@ -80,6 +92,55 @@ class Charts extends Component {
     });
   }
 
+  prepMarkers(){
+    const {cycles} = this.props;
+    const {dateStart, dateEnd} = this.state;
+
+    let m = [];
+    cycles.forEach(c => {
+      if (c.start){
+        let start = moment(c.start);
+        if (
+          start.isSameOrAfter(moment(dateStart)) &&
+          start.isSameOrBefore(moment(dateEnd).endOf('day'))
+        ){
+          m.push(
+            {
+              axis: 'x',
+              value: start,
+              lineStyle: { stroke: 'green', strokeWidth: 1 },
+              legend: "start of "+c.name,
+              legendOrientation: 'vertical',
+              textStyle:{fontWeight: "bold"}
+            }
+          )
+        }
+
+        let end = moment(c.end);
+        if (
+          end.isSameOrAfter(moment(dateStart)) &&
+          end.isSameOrBefore(moment(dateEnd).endOf('day'))
+        ){
+          m.push(
+            {
+              axis: 'x',
+              value: end,
+              lineStyle: { stroke: 'red', strokeWidth: 1 },
+              legend: "end of "+c.name,
+              legendOrientation: 'vertical',
+              legendOffsetX: -12,
+              textStyle:{fontWeight: "bold"}
+            }
+          )
+        }
+
+
+      }
+    });
+
+    return m;
+  }
+
   render(){
     const {cycles, exercises, references} = this.props;
 
@@ -108,7 +169,8 @@ class Charts extends Component {
 
         {selectedExercises.length > 0 &&
           (() => {
-            let data = this.prepData()
+            let data = this.prepData();
+            let markers = this.prepMarkers();
 
             return (
               <Fragment>
@@ -120,7 +182,7 @@ class Charts extends Component {
                     id="weight-range"
                     value={weightRange}
                     min={0}
-                    step={1}
+                    step={5}
                     max={400}
                     onChange={(e,v) => {this.setState({weightRange:v})}}
                     valueLabelDisplay="auto"
@@ -171,7 +233,7 @@ class Charts extends Component {
                 <Grid item xs={12} style={{height:"70vh"}}>
                   <ResponsiveLine
                     data={data}
-                    margin={{ top: 50, right: 150, bottom: 50, left: 60 }}
+                    margin={{ top: 50, right: 150, bottom: 50, left: 90 }}
                     xScale={{
                         type: 'time',
                         format: '%Y-%m-%d',
@@ -187,6 +249,22 @@ class Charts extends Component {
                         stacked: false,
                         min:weightRange[0],
                         max:weightRange[1]
+                    }}
+                    markers={markers}
+                    tooltip={({point}) => {
+                        return (
+                          <div
+                            style={{
+                              background: 'white',
+                              padding: '5px',
+                              border: '1px solid #ccc',
+                            }}
+                          >
+                           <p style={{margin:"0px"}}><strong>{point.serieId}</strong></p>
+                           <p style={{margin:"0px"}}>{point.data.xFormatted}</p>
+                           <p style={{margin:"0px"}}>{point.data.y} x {point.data.reps} x {point.data.sets}</p>
+                          </div>
+                        )
                     }}
                     axisLeft={{
                         legend: 'max weight lifted',
@@ -208,7 +286,7 @@ class Charts extends Component {
                     useMesh={true}
                     legends={[
                       {
-                          anchor: 'bottom-right',
+                          anchor: 'top-right',
                           direction: 'column',
                           justify: false,
                           translateX: 100,
