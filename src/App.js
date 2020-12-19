@@ -107,7 +107,7 @@ const styles = theme => ({
   },
 });
 
-const API = process.env.REACT_APP_API || 'http://localhost:3001/api/v1';
+const API = process.env.REACT_APP_API || 'http://192.168.4.23:3001/api/v1';
 
 class App extends React.Component {
   constructor(props){
@@ -323,15 +323,10 @@ class App extends React.Component {
                       exercises={exercises}
                       endCurrentCycle={(body) => {this.updateRecord("cycles",body)}}
                       startCycle={(body) => {this.addRecord("cycles",body)}}
-                      startWorkout={(body) => {
-                        this.updateRecord("cycles",body)
-                      }}
-                      endWorkout={(body) => {
-                        this.updateRecord("cycles",body)
-                      }}
-                      deleteWorkout={(body) => {
-                        this.updateRecord("cycles",body)
-                      }}
+                      startWorkout={(body) => {this.updateRecord("cycles",body)}}
+                      endWorkout={(body) => {this.updateRecord("cycles",body)}}
+                      deleteWorkout={(body) => {this.updateRecord("cycles",body)}}
+                      editWorkout={(body) => {this.updateRecord("cycles",body)}}
                     />
                   </Paper>
                 }

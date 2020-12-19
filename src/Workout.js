@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Button, Chip, Box } from '@material-ui/core';
-import { Delete as DeleteIcon, Timer as TimerIcon } from '@material-ui/icons';
+import { Delete as DeleteIcon, Timer as TimerIcon, Edit as EditIcon } from '@material-ui/icons';
 import moment from 'moment';
 
 import Block from './Block';
@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function Workout({workout, cycle, deleteWorkout, close}) {
+export default function Workout({workout, cycle, deleteWorkout, close, edit}) {
   const classes = useStyles();
   return (
     <Grid container>
@@ -31,11 +31,25 @@ export default function Workout({workout, cycle, deleteWorkout, close}) {
         </Grid>
       }
 
-      <Grid item xs={close ? 8 : 12}>
+      <Grid item xs={close ? 6 : 10}>
         <Box ml={2} mt={2}>
           <Chip icon={<TimerIcon />} label={moment.utc(moment(workout.end).diff(moment(workout.start))).format("HH:mm:ss")} />
         </Box>
       </Grid>
+
+      <Grid item xs={2}>
+        <Box mt={2}>
+          <Button
+            variant="contained"
+            color="secondary"
+            size="small"
+            onClick={edit}
+          >
+            <EditIcon />
+          </Button>
+        </Box>
+      </Grid>
+
       {deleteWorkout &&
         <Grid item xs={2}>
           <Box mt={2} className={classes.pull_right}>

@@ -4,12 +4,18 @@ import arrayMutators from 'final-form-arrays';
 import { FieldArray } from 'react-final-form-arrays';
 import createDecorator from 'final-form-calculate';
 import { TextField, Autocomplete } from 'mui-rff';
-import { Button, Box, Grid, Typography, Switch, FormControlLabel, Divider} from '@material-ui/core';
+import {
+  Button, Box, Grid, Typography, Switch,
+  FormControlLabel, Divider, Chip, IconButton
+} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { Timer as TimerIcon, Delete as DeleteIcon } from '@material-ui/icons';
 
 import Timer from './Timer';
 import BlockTemplate from './BlockTemplate';
 import Workout from './Workout';
+
+import moment from 'moment';
 
 const useStyles = makeStyles({
   compact: {
@@ -26,6 +32,7 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
       name: workout.name,
       cycle_id: workout.cycle_id,
       start: workout.start,
+      end: workout.end,
       blocks_attributes: workout.blocks.map(b => ({
         id: b.id,
         exercise_id: b.exercise_id,
@@ -128,7 +135,7 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                     })
                     const last_wrk = prev_wrks[prev_wrks.length-1];
 
-                    return (
+                    return (last_wrk && (
                       <Grid item xs={12}>
                         <h3>Previously completed {prev_wrks.length} times </h3>
                         <h3 className={classes.compact}>Last Time:</h3>
@@ -137,7 +144,7 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                           cycle={cycles.find(c => (c.id == last_wrk.cycle_id))}
                         />
                       </Grid>
-                    )
+                    ))
                   })()
                 }
 
@@ -148,10 +155,24 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                 <Grid item xs={12} style={{display:"flex", alignItems:"center"}}>
                   <Box display="inline-block" ml={2} mt={1}>
                     <Typography component="h4" variant="h6" color="inherit" noWrap>Current Workout: {values.workout.name}</Typography>
+                    <TextField
+                      name="workout.name"
+                      label="Name"
+                      placeholder="Workout Name"
+                      required={true}
+                    />
                   </Box>
-                  <Box display="inline-block" ml={2} mt={1}>
-                    <Timer start={values.workout.start} />
-                  </Box>
+
+                  {values.workout.end != null ?
+                    <Box ml={2} mt={2}>
+                      <Chip icon={<TimerIcon />} label={moment.utc(moment(values.workout.end).diff(moment(values.workout.start))).format("HH:mm:ss")} />
+                    </Box>
+                    :
+                    <Box display="inline-block" ml={2} mt={1}>
+                      <Timer start={values.workout.start} />
+                    </Box>
+                  }
+
                 </Grid>
 
                 <Grid item xs={12}>
@@ -165,9 +186,10 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                           let r = e && cycle.references.find(ref => ref.id == e.reference_id)
 
                           return (
+                            fields.value[index]._destroy != 1 &&
                             <Box key={index} mb={2}>
                               <Grid container spacing={3}>
-                                <Grid item xs={12}>
+                                <Grid item xs={9}>
                                   {e ?
                                     <Typography component="h4" variant="h6" color="inherit" noWrap>
                                       {e.name}
@@ -183,6 +205,20 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
 
                                 </Grid>
 
+                                <Grid item xs={1}>
+                                  <Box mt={2}>
+                                    <IconButton
+                                      type="button"
+                                      variant="contained"
+                                      color="secondary"
+                                      size="small"
+                                      onClick={() => fields.update(index, {_destroy:1, ...fields.value[index]})}
+                                    >
+                                      <DeleteIcon />
+                                    </IconButton>
+                                  </Box>
+                                </Grid>
+
                                 <Grid item xs={12}>
                                   <FieldArray name={`${name}.rounds_attributes`}>
                                     {({ fields }) => (
@@ -193,7 +229,7 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                                           return (
                                             <Box key={index} mb={2}>
                                               <Grid container spacing={3}>
-                                                <Grid item xs={2}>
+                                                <Grid item xs={3}>
                                                   <TextField
                                                     name={`${name}.reps`}
                                                     label="Reps"
@@ -202,7 +238,7 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                                                     required={true}
                                                   />
                                                 </Grid>
-                                                <Grid item xs={2}>
+                                                <Grid item xs={3}>
                                                   <TextField
                                                     name={`${name}.sets`}
                                                     label="Sets"
@@ -212,7 +248,7 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                                                   />
                                                 </Grid>
 
-                                                <Grid item xs={2}>
+                                                <Grid item xs={3}>
                                                   <TextField
                                                     name={`${name}.weight`}
                                                     label="Weight"

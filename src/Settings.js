@@ -3,7 +3,7 @@ import {
   Button, TextareaAutosize, Grid, Box
 } from '@material-ui/core';
 
-const API = process.env.REACT_APP_API || 'http://localhost:3001/api/v1';
+const API = process.env.REACT_APP_API || 'http://192.168.4.23:3001/api/v1';
 
 class Settings extends React.Component {
   constructor(props){

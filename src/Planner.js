@@ -26,6 +26,9 @@ const style = theme => ({
   },
   pull_right: {
     float: "right"
+  },
+  fcEventTitle: {
+    whiteSpace: "normal"
   }
 });
 
@@ -42,7 +45,8 @@ class Planner extends Component {
       showingWorkout: false,
       selectedWorkout: null,
       showingCycle: false,
-      selectedCycle: null
+      selectedCycle: null,
+      editingWorkout: false,
     }
   }
 
@@ -53,6 +57,7 @@ class Planner extends Component {
 
     this.setState({
       showingWorkout:true,
+      editingWorkout: false,
       selectedWorkout: workout
     });
   }
@@ -71,10 +76,12 @@ class Planner extends Component {
   render() {
     const {
       cycles, cycle_templates, workout_templates, classes, exercises,
-      endCurrentCycle, startCycle, startWorkout, endWorkout, deleteWorkout
+      endCurrentCycle, startCycle, startWorkout, endWorkout, deleteWorkout, editWorkout
     } = this.props;
 
-    const {startingCycle, startingWorkout, showingWorkout, selectedWorkout, showingCycle} = this.state;
+    const {
+      startingCycle, startingWorkout, showingWorkout, editingWorkout, selectedWorkout, showingCycle
+    } = this.state;
 
     const current_cycle = cycles.find(c => c.end === null);
 
@@ -117,7 +124,7 @@ class Planner extends Component {
     let calendar = (
       <FullCalendar
         plugins={[ dayGridPlugin, listPlugin]}
-        initialView="dayGridMonth"
+        initialView={window.innerWidth < 600 ? "listYear" : "dayGridMonth"}
         events={events}
         eventClick={(e) => {
           let id_parts = e.event._def.publicId.split('-');
@@ -147,10 +154,11 @@ class Planner extends Component {
     return (
       <Grid container>
         <Grid item xs={12}>
-          <Typography style={{ display: 'flex', alignItems: 'center'}} component="h2" variant="h5" color="inherit" noWrap>
+          <Typography style={{ display: 'flex', alignItems: 'center', whiteSpace:"normal"}} component="h2" variant="h5" color="inherit" noWrap>
             <EventNoteIcon fontSize="large"/>
             {showingWorkout ?
-              "Viewing Workout: "+selectedWorkout.name+" -- "+moment(selectedWorkout.start).format("LLLL")
+                "Viewing Workout: "+selectedWorkout.name+" -- "+moment(selectedWorkout.start).format("LLLL")
+              : editingWorkout ? "Editing Workout: "+selectedWorkout.name+" -- "+moment(selectedWorkout.start).format("LLLL")
               : startingCycle ? "New Cycle"
               : showingCycle ? "Viewing Cycle: "+selectedCycle.name
               : "Planner"
@@ -164,6 +172,7 @@ class Planner extends Component {
               workout={selectedWorkout}
               cycle={selectedWorkoutCycle}
               close={() => {this.setState({showingWorkout: false, selectedWorkout: null})}}
+              edit={() => {this.setState({showingWorkout: false, editingWorkout: true})}}
               deleteWorkout={deleteWorkout}
             />
           : current_cycle != undefined ?
@@ -220,6 +229,29 @@ class Planner extends Component {
                       onClose={() => {this.setState({startingWorkout: false})}}
                     />
                   </Grid>
+                : editingWorkout ?
+                  <WorkoutForm
+                    workout={selectedWorkout}
+                    cycle={current_cycle}
+                    cycle_template={current_cycle_template}
+                    exercises={exercises}
+                    workout_templates={workout_templates}
+                    onSubmit={async (body) => {
+                      let cc = cycles.find(c => c.id == body.workout.cycle_id)
+                      let cccopy = {
+                        id: cc.id,
+                        cycle: JSON.parse(JSON.stringify(cc))
+                      };
+                      cccopy.cycle.workouts_attributes = cccopy.cycle.workouts
+                      delete cccopy.cycle.workouts;
+                      const wai = cccopy.cycle.workouts_attributes.findIndex(wa => wa.id == body.id);
+                      cccopy.cycle.workouts_attributes[wai] = body.workout;
+                      await editWorkout(cccopy);
+                      //this.selectWorkout(cc.id, body.id)
+                      this.setState({editingWorkout: false, showingWorkout: false, selectWorkout: null})
+                    }}
+                    onClose={() => {this.setState({editingWorkout: false, showingWorkout: true})}}
+                  />
                 : showingCycle ?
                   <Cycle
                     cycle={selectedCycle}
@@ -252,6 +284,9 @@ class Planner extends Component {
                       </Box>
                     </Grid>
                     <Grid item xs={12}>
+                      <style>
+                        {".fc-daygrid-event{ white-space: initial !important; }"}
+                      </style>
                       {calendar}
                     </Grid>
                   </Fragment>

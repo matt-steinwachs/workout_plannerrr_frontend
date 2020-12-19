@@ -14,9 +14,10 @@
   ☐ Schedule workouts ahead?
 ☐ Charts/Stats
   ☐ Reference Value Timeline w/ cycle marks
-  ☐ exercise timeline
+  ✔ exercise timeline @done(2020-09-27 00:25)
   ☐ Workout Time
   ☐ exercise total reps
+  ☐ lock x(time) scale to a selected cycle start and current date
 ☐ Exercise filter/quick search
 ☐ WorkoutTemplate filter/quick search
 ✔ Exercise combo box in forms @done(2020-07-15 20:13)
@@ -45,7 +46,7 @@
 ✔ Break up planner into components and dry out display logic @done(2020-07-17 19:52)
 ✔ Show percentage of reference for the weights entered in the workoutform @done(2020-07-19 10:08)
 ✔ Button to view workout_template from new workout form. @done(2020-07-27 09:53)
-☐ Button to view past instances of workout_template from new workout form.
+✔ Button to view past instances of workout_template from new workout form. @done(2020-09-27 00:24)
 ☐ Timed work and rest per round
   ☐ Auto timer
   ☐ Pause button
