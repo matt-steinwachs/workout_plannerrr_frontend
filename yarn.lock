@@ -1172,35 +1172,36 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
   integrity sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==
 
-"@fullcalendar/common@~5.4.0":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/common/-/common-5.4.0.tgz#65474163e43bea4443b2577cd39d7021678237df"
-  integrity sha512-w6C5VLxZmS8AmbAIiIHy+p+S/G9wtsvFEgyM/Ijd+5/ENKV4bs8ieOsetdl79WUheRKg0oXiiG5fy1X3EFk/Gg==
+"@fullcalendar/common@~5.5.0":
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/common/-/common-5.5.0.tgz#02509c8d96bb0bb7fcf397ccf564ed271a6cee00"
+  integrity sha512-xHsHRI2xnC4vDPdRaOkt03SGIEsmlcSTI6RVInI2PQKi3n4otgM4ej3WL4B010uT4IzrBlUvNm8HHEo/o3g8Ug==
   dependencies:
+    ical.js "^1.4.0"
     tslib "^2.0.3"
 
 "@fullcalendar/daygrid@^5.1.0":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-5.4.0.tgz#9e29089f58166cbfea980da1a69b55e157794ed6"
-  integrity sha512-UgBcEWNMFuhnwQNH0NP1qWo3swH3jAqXY7Y43eQakwwFbCuP/gBSmiOgkVnfK2SmPJTDMEnFR5jApcXPlpPXlQ==
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-5.5.0.tgz#48f943d070a07f88cd6f8170fb757d3038239bd6"
+  integrity sha512-O/59C3ihElLsPnkjlD1xUgAf3v7WEARXVO+wZfASKtK14Ccux2MA9mWUA1+80m9q8on7SYL36ORhrea7GKy/qQ==
   dependencies:
-    "@fullcalendar/common" "~5.4.0"
+    "@fullcalendar/common" "~5.5.0"
     tslib "^2.0.3"
 
 "@fullcalendar/list@^5.1.0":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/list/-/list-5.4.0.tgz#f6ade6d4a6dc9e61ef8eac155bc2fab94a897c76"
-  integrity sha512-6J/ZeZttjfPhpQ7elVHabvjvdnnvH/ttgRmqx5kYyV4Fpjm3TPD9DJVLsONAvp/wFM9PWoF4t+JkXapXJAYH3Q==
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/list/-/list-5.5.0.tgz#8bc1523ad08e439cde366697acebe8bc4cf2fe5f"
+  integrity sha512-hC+EKrXtnj71rq4gq8vIhb12dlOxu07BuOTzU1kxgB3BdhuO1RiAPm1TCKdYpQjtUTCRT23Ocvs+m/Ei/xh90Q==
   dependencies:
-    "@fullcalendar/common" "~5.4.0"
+    "@fullcalendar/common" "~5.5.0"
     tslib "^2.0.3"
 
 "@fullcalendar/react@^5.1.0":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/react/-/react-5.4.0.tgz#874fa7a72b92aec1d907e253f1d59b48ef1b9759"
-  integrity sha512-FtTuD40jdbSzttKmC6PHLnoJSNrw48oq/zbjZ2Qm/94YPEuGULJ0YMjftGTg6pGxBhJf7LiC1bU5eM92iwIYZA==
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/react/-/react-5.5.0.tgz#4a74e816ee67c4de59ca6bae1a658e6e72c7970a"
+  integrity sha512-ss109y/kYIb9mwmE9dZc5c2o5I4CoqREDqLNAur83CGC5NvCH8gRzZXEilZz1E6ORuziBEYkPPtREn7Mp+6lYg==
   dependencies:
-    "@fullcalendar/common" "~5.4.0"
+    "@fullcalendar/common" "~5.5.0"
     tslib "^2.0.3"
 
 "@hapi/address@2.x.x":
@@ -3112,9 +3113,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001035, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001165:
-  version "1.0.30001168"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001168.tgz#6fcd098c139d003b9bd484cbb9ca26cb89907f9a"
-  integrity sha512-P2zmX7swIXKu+GMMR01TWa4csIKELTNnZKc+f1CjebmZJQtTAEXmpQSoKVJVVcvPGAA0TEYTOUp3VehavZSFPQ==
+  version "1.0.30001170"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001170.tgz#0088bfecc6a14694969e391cc29d7eb6362ca6a7"
+  integrity sha512-Dd4d/+0tsK0UNLrZs3CvNukqalnVTRrxb5mcQm8rHL49t7V5ZaTygwXkrq+FB+dVDf++4ri8eJnFEJAB8332PA==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -5816,6 +5817,11 @@ hyphenate-style-name@^1.0.3:
   resolved "https://registry.yarnpkg.com/hyphenate-style-name/-/hyphenate-style-name-1.0.4.tgz#691879af8e220aea5750e8827db4ef62a54e361d"
   integrity sha512-ygGZLjmXfPHj+ZWh6LwbC37l43MhfztxetbFCoYTM2VjkIUpeHgSNn7QIyVFj7YQ1Wl9Cbw5sholVJPzWvC2MQ==
 
+ical.js@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/ical.js/-/ical.js-1.4.0.tgz#fc5619dc55fe03d909bf04362aa0677f4541b9d7"
+  integrity sha512-ltHZuOFNNjcyEYbzDgjemS7LWIFh2vydJeznxQHUh3dnarbxqOYsWONYteBVAq1MEOHnwXFGN2eskZReHclnrA==
+
 iconv-lite@0.4.24, iconv-lite@^0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
@@ -5885,9 +5891,9 @@ import-fresh@^2.0.0:
     resolve-from "^3.0.0"
 
 import-fresh@^3.0.0, import-fresh@^3.1.0:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.2.2.tgz#fc129c160c5d68235507f4331a6baad186bdbc3e"
-  integrity sha512-cTPNrlvJT6twpYy+YmKUKrTSjWFs3bjYjAhCwm+z4EOCubZxAuO+hHpRN64TqjEaYSHs7tJAE0w1CKMGmsG/lw==
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
+  integrity sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==
   dependencies:
     parent-module "^1.0.0"
     resolve-from "^4.0.0"
