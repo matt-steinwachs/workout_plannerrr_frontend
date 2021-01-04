@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Button, Chip, Box } from '@material-ui/core';
+import { Grid, Button, Chip, Box, Typography} from '@material-ui/core';
 import { Delete as DeleteIcon, Timer as TimerIcon, Edit as EditIcon } from '@material-ui/icons';
 import moment from 'moment';
 
@@ -87,6 +87,19 @@ export default function Workout({workout, cycle, deleteWorkout, close, edit}) {
           <Block block={b} references={cycle.references} />
         </Grid>
       )}
+
+      {(workout.notes != null && workout.notes != "") &&
+        <Grid item xs={12}>
+          <Box p={2}>
+            <Typography component="h2" variant="h6" color="inherit">
+              Notes:
+            </Typography>
+            <Typography component="p" variant="body1" color="inherit">
+              {workout.notes}
+            </Typography>
+          </Box>
+        </Grid>
+      }
     </Grid>
   )
 }

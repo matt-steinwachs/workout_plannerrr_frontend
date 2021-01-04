@@ -23,13 +23,16 @@ const useStyles = makeStyles({
   },
 });
 
-export default function WorkoutForm({workout, cycle, cycle_template, exercises, workout_templates, cycles, onSubmit, onClose}) {
+export default function WorkoutForm({
+  workout, cycle, cycle_template, exercises, workout_templates, cycles, onSubmit, onClose
+}) {
   const classes = useStyles();
   const initVal = workout ? {
     id: workout.id,
     workout: {
       id: workout.id,
       name: workout.name,
+      notes: workout.notes,
       cycle_id: workout.cycle_id,
       start: workout.start,
       end: workout.end,
@@ -296,6 +299,20 @@ export default function WorkoutForm({workout, cycle, cycle_template, exercises, 
                   </FieldArray>
                 </Grid>
               </Fragment>
+            }
+
+            {values.id &&
+              <Grid item xs={12}>
+                <Box p={3}>
+                  <TextField
+                    multiline
+                    rowsMin={4}
+                    label="Notes"
+                    placeHolder="Notes"
+                    name="workout.notes"
+                  />
+                </Box>
+              </Grid>
             }
 
             <Grid item xs={12} md={12} lg={12}>

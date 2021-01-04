@@ -55,3 +55,4 @@
 ✔ Bug: stop weight field in WorkoutForm from being hidden when null  @done(2020-07-22 09:27)
 ✔ Add year list to planner calendar @done(2020-07-27 10:05)
 ✔ Add ability to add blocks to workouts in progress @done(2020-07-28 09:07)
+✔ Add notes to workouts @done(2021-01-03 12:57)
